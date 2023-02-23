@@ -1,0 +1,199 @@
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  padding-left: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.searchBar{
+  border-radius: 1em;
+  border: none;
+  opacity: 80%;
+  background-color: #ECECEC;
+  width: 30%;
+}
+
+.navBar{
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  background-color: #03989E;
+  gap: 1em;
+  border-radius: 15px;
+  padding-bottom: 1em;
+}
+
+.avatar{
+  padding-left: 2em;
+}
+
+.navBar > a{
+  text-decoration: none;
+  font-size: 22px;
+  color: #656565;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  width: 90%;
+  margin: 0 auto;
+  height: 10%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navBar2{
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+}
+
+
+main{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 1em;
+}
+
+.personGrid{
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1em;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 2em;
+}
+
+.person{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  word-wrap: break-word;      
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+.person > p > button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+
+.person > p > button:hover{
+  opacity: 0.7;
+}
+
+.person > img{
+  height: 10%;
+  width: 10%;
+}
+
+.person > h1{
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  body{
+    width: 100%;
+    padding-left: 0em;
+    margin: 0 auto;
+    padding-top: 0em;
+    justify-content: center;
+  }
+  main{
+    width: 100%;
+    flex-direction: column;
+    padding-left: 0em;
+    margin: 0 auto;
+  }
+  .navBar{
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    padding: 0em;
+  }
+
+  .navBar2{
+  visibility: visible;
+  padding-bottom: 3em;
+}
+  
+  .personGrid{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .person{
+    width: 95%;
+    margin: 0 auto;
+  }
+  .searchBar{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .dropbtn{
+  background-color: #03989E;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.navBar2{
+  visibility: visible;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+  
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="doctorsNursesHome.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <input type='text' name='search' placeholder="search" class='searchBar'>
+  <main>
+    <div class='navBar'>
+      <img>
+      <a class='button' href='doctorsHome.html'>Home</a>
+      <a class='button' href='calendar.html'>Calendar</a>
+      <a class='button' href='patientsList.html'>Patients</a>
+      <a class='button' href='nursesList.html'>Nurses</a>
+      <a class='button' href='createTask.html'>Create Task</a>
+      <a class='button' href='patient.html'>A patient</a>
+      <a class='button' href='modal.html' id='signOut'>SignOut</a>
+    </div>
+
+    <div class='navBar2'>
+      <button onclick="myFunction()" class="dropbtn">Menu</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="createAppointment.html">Link 1</a>
+        <a href="landingPage.html">Home</a>
+        <a href="nursesList.html">NursesList</a>
+      </div>
+    </div>
+
+    <div class='tools'>
+      <div class='informationBar'>
+        <div class='informationBlock' id='informationBlock1'>Info Here</div>
+        <div class='informationBlock' id='informationBlock2'>Info Here</div>
+        <div class='informationBlock' id='informationBlock3'>Info Here</div>
+      </div>
+
+      <div class='innerTools'>
+        <div class='canvas' id='canvas' , name='canvas'>
+          "Canvas Info here"
+        </div>
+        <div class='clockDisplay'>
+          "Clock Here"
+        </div>
+      </div>
+    </div>
+    <script>
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+    </script>
+</body>

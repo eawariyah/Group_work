@@ -1,0 +1,217 @@
+html, body{
+  width: 100%;
+  overflow-x: hidden;
+
+}
+*{
+  box-sizing: border-box;
+}
+
+.searchBar{
+  width: 40%;
+  height: 30px;
+  opacity: 80%;
+  background-color: #EEF1F0;
+  border-radius: 1em;
+  border: none;
+  padding-left: 1em;
+}
+.navBar{
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  background-color: #03989E;
+  gap: 1em;
+  border-radius: 15px;
+  padding-bottom: 1em;
+}
+.navBar > a{
+  text-decoration: none;
+  font-size: 22px;
+  color: #656565;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  width: 90%;
+  margin: 0 auto;
+  height: 10%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.navBar > a:hover{
+  opacity: 50%;
+}
+.navBar2{
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+}
+
+
+
+
+.dropbtn{
+  background-color: #03989E;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+
+.navBar2{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;
+                          }
+
+.show {
+  display:block;
+      }
+
+
+#signOut{
+  background-color: #343D44;
+  color: white;
+}
+
+body{
+  padding-left: 1em;
+}
+
+main{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 500px;
+  padding-top: 1em;
+}
+
+.tools{
+  width: 80%;
+  background-color: #EEF1F0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 2em;
+}
+
+.innerTools{
+  display: flex;
+  flex-direction: row;
+  height: 70%;
+  padding-left: 2em;
+}
+
+.informationBar{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  margin: 0 auto;
+  padding-top: 2em;
+  height: 30%;
+}
+
+.informationBlock{
+  background-color: white;
+  width: 20%;
+  border-radius: 5px;
+  border: none;
+  height: 90%;
+}
+
+.canvas{
+  width: 50%;
+  background-color: white;
+  
+}
+
+.clockDisplay{
+  background-color: red;
+  width: 30%;
+}
+
+
+
+
+@media only screen and (max-width: 800px) {
+  html{
+    overflow: hidden;
+  }
+  body{
+    padding-left: 0em;
+  }
+  .navBar, .clockDisplay{
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+  }
+  .navBar2{
+  visibility: visible;
+  padding-bottom: 3em;
+  }
+  main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+  }
+  .tools{
+    width: 100%;    
+    background-color: #03989E;
+     padding-bottom: 1em;
+  }
+  .innerTools{
+    flex-direction: column;
+    padding-left: 0em;
+    width: 100%;
+  }
+  .canvas{
+    width: 90%;
+    margin: 0 auto;
+    padding-top:  10em;
+    padding-left: 0em;
+    border-radius: 1em;
+    border-color: #D9D9D9;
+     padding-bottom: 10px;
+  }
+  .informationBar{
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    gap: 0 em;
+  }
+  .informationBlock{
+    width: 90%;
+    border-radius: 5px;
+    height: 50px;
+    margin: 0 auto;
+  }
+}

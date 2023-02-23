@@ -1,0 +1,121 @@
+<!-- Dictionary:
+This is an HTML document that has a few sections: a head section that includes metadata about the page, 
+including the title and a link to a stylesheet; and a body section, which contains the visible content of the page.
+
+Within the body section, there are several divs that serve as containers for different elements on the page,
+ including the main content area, which is an empty div with the class "main_content". There are also several 
+ buttons with the text "Home", "Calendar", "Patient", and "Sign out", which are contained within their respective divs.
+
+There is a clock section that displays an analog clock. This section includes several divs for the hour, minute,
+ and second hands of the clock. There is also a section that displays the date, with divs for the day, month, and year.
+
+There are a few additional elements with various styles, including a bio section, an image placeholder, 
+and several divs with text in different colors. Finally, there is a section at the end that defines some
+ global styles using CSS variables. -->
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Doctors_page</title>
+      <link rel="stylesheet" href="Doctors_login_page.css">
+   </head>
+   <body onLoad="initClock()">
+      <div class = "left_menu">
+         <p style="color: rgb(0, 255, 0);"></p>
+      </div>
+      <div class = "back_body">
+         <p style="color: #d9d9d9;"></p>
+      </div>
+      <div class = "home">
+         <button>Home</button>
+         <!-- <button class="button" onclick="function()">Home</button> -->
+      </div>
+      <div class="image_placeholder">
+         <img src="">
+      </div>
+      <div class = "calender">
+         <button>Calender</button>
+      </div>
+      <div class = "patient">
+         <button>Patient</button>
+      </div>
+      <div class = "sign_out">
+         <button style="color: white;">Sign out</button>
+      </div>
+      <div class = "hours_worked">
+         <p style="color: rgb(255, 255, 255);"></p>
+      </div>
+      <div class = "pay">
+         <p style="color: rgb(255, 255, 255);"></p>
+      </div>
+      <div class = "no_patients">
+         <p style="color: rgb(255, 255, 255);"></p>
+      </div>
+      <div class="main_content"></div>
+      <div class="bio">
+         <div id="name" style="color: white;">Name</div>
+         <div id="role"  style="color: white;">Role</div>
+      </div>
+      <!-- <div class="page-header"> Analog Clock </div> -->
+      <div class="clock">
+         <div class="hour"></div>
+         <div class="min"></div>
+         <div class="sec"></div>
+      </div>
+      <div class="box">
+         <div class="date">
+            <div id="day"></div>
+            <div id="daymonth"></div>
+            <div id="year"></div>
+         </div>
+      </div>
+      <script>
+         const deg = 6;
+         const hour = document.querySelector(".hour");
+         const min = document.querySelector(".min");
+         const sec = document.querySelector(".sec");
+         
+         const setClock = () => {
+         let day = new Date();
+         let hh = day.getHours() * 30;
+         let mm = day.getMinutes() * deg;
+         let ss = day.getSeconds() * deg;
+         
+         hour.style.transform = `rotateZ(${hh + mm / 12}deg)`;
+         min.style.transform = `rotateZ(${mm}deg)`;
+         sec.style.transform = `rotateZ(${ss}deg)`;
+         };
+         
+         // first time
+         setClock();
+         // Update every 1000 ms
+         setInterval(setClock, 1000);
+         
+         
+         var date = new Date(),
+         year = date.getFullYear(),
+         month = date.getMonth(),
+         day = date.getUTCDate(),
+         days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+         months = ["January", "February", "March", "April", "May", "June", "July", "Augast", "September", "October", "Novamber", "December"];
+         
+         document.getElementById('daymonth').innerHTML = day + " " +months[month] + " ";
+         document.getElementById('year').innerHTML = year;
+         
+         function time() {
+         var d = new Date(),
+           s = d.getSeconds() * 6,
+           m = d.getMinutes() * 6 + (s / 60),
+           h = d.getHours() % 12 / 12 * 360 + (m / 12);
+         
+         document.getElementById('day').innerHTML = days[d.getDay()] + ", ";
+         }
+         time();
+         
+         
+      </script>
+   </body>
+</html>

@@ -1,0 +1,71 @@
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif
+}
+body{
+    display: flex;
+    flex-direction: row;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding-left: 2em;
+    width: 50%;
+}
+.buttonArray{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+button{
+    background-color: #03989E;
+    border-radius: 10px;
+    border: none;
+    width: 20%;
+    color: white;
+    padding: 8px;
+
+}
+h3{
+    color:#03989E;
+    padding-bottom: 1em;
+}
+main > p{
+    padding-bottom: 2em;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.banner{
+    width: 50%;
+}
+
+.banner > img{
+    width: 100%;
+}
+@media only screen and (max-width: 800px){
+    body{
+        width: 100%;
+        flex-direction: column;
+        padding-left: 0em;
+    }
+    main{
+        width: 100%;
+        padding-left: 0em;
+    }
+    .banner{
+        visibility: hidden;
+        width: 0px;
+        height:0px;
+    }
+    main >p{
+        padding-bottom: 0em;
+        word-wrap: break-word;
+    }
+}
+

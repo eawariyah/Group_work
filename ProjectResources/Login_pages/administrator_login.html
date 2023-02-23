@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="F:\Papers and School\ProjectResources\Login_pages\administrator_login.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="welcome">
+                <p> <b>Welcome back admin!</b></p>
+            </div>
+            <div class="img-container">
+                <img src="F:\Papers and School\ProjectResources\Assets\Figma Backing.png">
+            </div>
+            <div class="content">
+                <p>Kindly enter your login details</p>
+            </div>
+            <form>
+                <div class="email">
+                    <img src="F:\Papers and School\ProjectResources\Assets\mdi_email.svg" class="email-icon">
+                    <input type="text" placeholder="Email" id="email_input" onfocus="hideEmailIcon()" required>
+                </div>
+                <div class="password">
+                    <img src="F:\Papers and School\ProjectResources\Assets\material-symbols_lock.svg" class="password-icon">
+                    <input type="password" placeholder="Password" id="password_input" onfocus="hidePasswordIcon()" required>
+                </div>
+                <div class="button_1">        
+                    <button class="button" id = "button_1" type="submit">Sign In</button>
+                </div>
+             </form>
+            <div class="sign-up">
+                <p>Don’t have an account? Sign Up <a style="color:blue">here</a></p>
+            </div>
+        </div>
+
+
+        <script>
+
+            const user_email = document.getElementById('email_input');
+            const user_password = document.getElementById('password_input');
+            const btn = document.getElementById('button_1');
+
+            btn.addEventListener('click', validateEmail);
+
+            // validate email
+            // function validateEmail() {
+            //     const email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            //     if (email_regex.test(user_email.value)) {
+            //         alert('Email is valid');
+            //     } else {
+            //         alert('Email is invalid');
+            //     }
+            // }
+
+            btn.addEventListener('click', validatePassword);
+
+            function validatePassword() {
+                const password_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+
+                if (password_regex.test(user_password.value)) {
+                    alert('Password is valid');
+                } else {
+                    alert('Password is invalid');
+                }
+            }
+
+
+
+            function hideEmailIcon() {
+                let emailIcon = document.querySelector('.email-icon');
+                emailIcon.style.display = "none";
+            }
+            function hidePasswordIcon() {
+                let passwordIcon = document.querySelector('.password-icon');
+                passwordIcon.style.display = "none";
+            }
+        </script>
+    </body>
+</html>

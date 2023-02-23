@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="F:\Papers and School\ProjectResources\Login_pages\nurse_login.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="welcome">
+                <p> <b>Welcome back nurse!</b></p>
+            </div>
+            <div class="img-container">
+                <img src="F:\Papers and School\ProjectResources\Assets\Figma Backing.png">
+            </div>
+            <div class="content">
+                <p>Kindly enter your login details</p>
+            </div>
+            <form>
+                <div class="email">
+                    <img src="F:\Papers and School\ProjectResources\Assets\mdi_email.svg" class="email-icon">
+                    <input type="text" placeholder="Email" id="email-input" onfocus="hideEmailIcon()">
+                </div>
+                <div class="password">
+                    <img src="F:\Papers and School\ProjectResources\Assets\material-symbols_lock.svg" class="password-icon">
+                    <input type="password" placeholder="Password" id="password-input" onfocus="hidePasswordIcon()">
+                </div>
+                <div class="button">        
+                    <button class="button" type="submit">Sign In</button>
+                </div>
+             </form>
+            <div class="sign-up">
+                <p>Don’t have an account? Sign Up <a style="color:blue">here</a></p>
+            </div>
+        </div>
+        <script>
+            function hideEmailIcon() {
+                let emailIcon = document.querySelector('.email-icon');
+                emailIcon.style.display = "none";
+            }
+            function hidePasswordIcon() {
+                let passwordIcon = document.querySelector('.password-icon');
+                passwordIcon.style.display = "none";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,113 @@
+body {
+    background-color: #fff;
+}
+
+.container .banner_name, .container .quick_bio1, .container .quick_bio2, .container .login_placeholder {
+    position: absolute;
+    left: 7%;
+    font-size: 3em;
+    font-family: sans-serif;
+    align-items: center;
+}
+.container .login_placeholder{
+    top: 53%;
+    font-size: 2.5em;
+}
+.container .banner_name {
+    top: 20%;
+    font-size: 5em;
+}
+
+.container .quick_bio1 {
+    top: 40%;
+}
+
+.container .quick_bio2 {
+    top: 30%;
+}
+
+.container.photo .img, img {
+    position: relative;
+    left: 50px;
+    width: 40%;
+    height: 99%;
+    z-index: 5;
+}
+
+.container.photo {
+    position: relative;
+    left: 50px;
+    width: 40%;
+    height: 99%;
+    z-index: 5;
+}
+
+.container.logo, img {
+    position: absolute;
+    height: 98%;
+}
+
+.container.logo {
+    left: 0%;
+    width: 50%;
+    max-width: 150%;
+}
+
+img {
+    left: 60%;
+    width: 40%;
+}
+
+.admin_placement, .doctor_placement, .nurse_placement {
+    position: absolute;
+    top: 70%;
+    appearance: button;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 12px 40px;
+    text-align: center;
+    user-select: none;
+    vertical-align: middle;
+}
+
+.admin_placement {
+    left: 7%;
+}
+
+.doctor_placement {
+    left: 21%;
+}
+
+.nurse_placement {
+    left: 35%;
+}
+
+.admin_placement:focus, .admin_placement:hover, .admin_placement:active,
+.doctor_placement:focus, .doctor_placement:hover, .doctor_placement:active,
+.nurse_placement:focus, .nurse_placement:hover, .nurse_placement:active {
+    text-decoration: none;
+}
+
+.admin_placement:active, .doctor_placement:active, .nurse_placement:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+    outline: 0;
+}
+
+.admin_placement:not([disabled]):active, .doctor_placement:not([disabled]):active, .nurse_placement:not([disabled]):active {
+    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+    .admin_placement, .doctor_placement, .nurse_placement {
+        padding: 12px 50px;
+    }
+}

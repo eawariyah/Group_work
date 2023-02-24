@@ -13,7 +13,7 @@ if (isset($_POST['login']))
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
-	$dbname = "class_activity";
+	$dbname = "clinic_db";
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -55,16 +55,16 @@ if (isset($_POST['login']))
 		$_SESSION['urole'] = $finalData['user_role'];
 
 
-        header("Location: nursesHome.html");}
+        header("Location: admin_page.php");}
         else {
             //echo error but continue executing the code to close the session
-            header("Location: loginNurse.html");
+            header("Location: loginAdmin.html");
         }
     
 
 	} else {
 		//echo error but continue executing the code to close the session
-        header("Location: loginNurse.html");
+        header("Location: loginAdmin.html");
 	}
 
 	//close database connection
@@ -73,7 +73,7 @@ if (isset($_POST['login']))
 else
 {
 	//redirect to login page
-	header("Location: loginDoctor.html");
+	header("Location: loginAdmin.html");
 	exit();
 }
 

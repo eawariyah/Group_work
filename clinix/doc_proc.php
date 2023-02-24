@@ -13,7 +13,7 @@ if (isset($_POST['login']))
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
-	$dbname = "class_activity";
+	$dbname = "clinic_db";
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);

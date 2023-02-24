@@ -4,79 +4,71 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Register Page</title>
+	<style>
+		body {
+			background-color:  #ADD8E6;
+			color: #fff;
+			font-family: Arial, sans-serif;
+			padding: 20px;
+		}
+		
+		h2 {
+			color: #00f;
+		}
+		
+		label {
+			display: block;
+			margin-bottom: 10px;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		
+		input[type="text"], input[type="password"] {
+			display: block;
+			margin-bottom: 20px;
+			padding: 10px;
+			font-size: 16px;
+			border: none;
+			border-radius: 5px;
+			background-color: #fff;
+			color: #000;
+		}
+		
+		input[type="submit"] {
+			background-color: #00f;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			padding: 10px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+		
+		a {
+			color: #00f;
+			text-decoration: none;
+			margin-top: 20px;
+			display: block;
+		}
+	</style>
 </head>
-
 <body>
-	
-
-	
 
 	<h2>Register Here</h2>
 	<!-- register form -->
-	<form>
-	  <label>User Name:</label><br>
-	  <input type="text" name="uname"  id="uname"><br>
-	  <label>User Pass:</label><br>
-	  <input type="text" name="upass" id="upass"><br><br>
-	  <input type="submit" name="register" id="register" value="Register" onclick="validatepost();">
+	<form action="register_back.php" method="POST">
+		  
+		  <label>User Name:</label>
+		  <input type="text" name="uname">
+		  <label>User Pass:</label>
+		  <input type="password" name="upass">
+		  <label> Doctor_Id :</label>
+		  <input type="text" name="txt">
+		  <input type="submit" name="register" value="Register">
 	</form> 
 
 	<!-- link to register -->
-	<a href="login.php">Go to Login Page</a>
+	<a href="doc_login.php">Go to Login Page</a>
 
-	<script type="text/javascript">
-		function validatepost() 
-		{
-			event.preventDefault();
-
-			//colect the form data
-			var useremail = document.getElementById('uname');
-			var userpass = document.getElementById('upass');
-			var userbutton = document.getElementById('register');
-
-			//validate the email 
-			var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
-			if (useremail.value.match(mailformat)) 
-			{
-				//alert('email is valid');
-				//call the ajax post function
-				loadDoc(useremail.value, userpass.value, userbutton.value);
-
-			}
-			else
-			{
-				alert('email is wrong');
-				return false;
-			}
-
-			//alert('run this anyway');
-		}
-		//make http post to backend register_proc.php
-		function loadDoc(umail, upass, ubutton) 
-		{
-			  const xhttp = new XMLHttpRequest();
-			  xhttp.onload = function() 
-			  {
-			    // document.getElementById("demo").innerHTML = this.responseText;
-			     //alert(this.responseText);
-			     //check if action was successful
-			     if(this.responseText == 'success')
-			     {
-			     	window.location.href = 'loginDoctor.html';
-			     }
-			     else
-			     {
-			     	alert(this.responseText);
-			     	return false;
-			     }
-			    	
-			    }
-			  xhttp.open("GET", "register_proc.php?uname="+umail+"&upass="+upass+"&register="+ubutton, true);
-			  xhttp.send();
-		}
-					
-		
-	</script>
 </body>
 </html>

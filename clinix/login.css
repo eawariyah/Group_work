@@ -1,52 +1,54 @@
-html{
-    height: 100%;
-    width: 100%;
-    background-color: #D9D9D9;
-    overflow-x: hidden;
-    font-family: 'Inter';
-    font-style: normal;
-    display: flex;
-    flex-direction: column;
-  }
-  
   body{
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    align-items: center ;
-    padding-top: 3em;
-    padding-bottom: 3em;
+    background-color: #D9D9D9;
   }
   
   
   form{
-      width: 400px;
-      height: 450px;
-      background-color: white;
-      margin: 0 auto;
-      text-align: center;
-      border-radius: 0.3em;
+    position: absolute;
+    top: 13.5%;
+    right: 341px; 
+    left: 341px;   
+    width: 45%;
+    height: 450px;
+    background-color: white;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 0.3em;
   }
 
   #logo{
+      position: absolute;
+      top: 5%;
+      right: 42%;
       width: 60px;
-      height: 60px;
+      height: 50px;
       padding-bottom: none;
   }
   
   #welcomeBack{
+    position: absolute;
+    top: 8%;
+    right: 30%;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .mmm{
+    position: absolute;
+    top: 22%;
+    right: 30%;
+    font-size: 15px;
+    color: rgb(138, 138, 138);
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
-  form > h5{
-    width: 80%;
-    margin: 0 auto;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 150.02%;
-    color: #7E8081;
-  }
-  
-  #email, #password{
+
+  #email{
+    position: absolute;
+    top: 35%;
+    right: 90px;
     width: 350px;
     height: 45px;
     border-radius: 0.2em;
@@ -58,7 +60,28 @@ html{
     line-height: 24px;
     color:  #697A89;
     border-width: 0;
+    z-index: 0;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   }
+  #password{
+    position: absolute;
+    top: 55%;
+    right: 90px;
+    width: 350px;
+    height: 45px;
+    border-radius: 0.2em;
+    background-color: #F3F3F3;
+    font-size: 15px;
+    padding-left: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color:  #697A89;
+    border-width: 0;
+    z-index: 0;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+
   
   
   #forgetPassword{
@@ -67,6 +90,10 @@ html{
   }
   
   #signIn{
+    position: absolute;
+    bottom: 15%;
+    right: 107px;
+
     width: 350px;
     height: 45px;
     background-color: #299AA1;
@@ -90,4 +117,59 @@ html{
   a:link{
     text-decoration: none;
      color: #076CCA;
+  }
+
+  @media (max-width: 1200px) {
+    form{
+      width: 90%;
+      left: 5%;
+      right: 5%;
+      height: auto;
+    }
+
+    #logo{
+      display: none;      
+    }
+
+    #welcomeBack{
+      position: relative;
+      right: 0;
+      top: 0;
+    }
+
+    .mmm{
+      position: relative;
+      right: 0;
+      top: 0;
+    }
+
+    #email{
+      position: relative;
+      width: 90%;
+      left: 0;
+      right: 0;
+      margin: 16px 0;
+    }
+
+    #password{
+      position: relative;
+      width: 90%;
+      left: 0;
+      right: 0;
+      margin: 16px 0;
+    }
+
+    #forgetPassword{
+      text-align: left;
+    }
+
+    #signIn{
+      position: relative;
+      width: 100%;
+      left: 0;
+      right: 0;
+    }
+    #noAccount{
+      text-align: left;
+    }
   }

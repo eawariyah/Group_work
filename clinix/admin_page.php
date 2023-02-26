@@ -27,8 +27,8 @@ $res = $conn->query($qry);
     <!-- <img src = "adm.jpg"/> -->
       </header>
     <button><a href="admin_page.php">Home</a></button>
-    <a href="calendar.html">Calendar</a>
-    <a href="Register.php" class="button">Register doctor</a>
+    <a href="calendar.php">Calendar</a>
+    <a href="createEmployee.php" class="button">Register doctor</a>
     <a href="logout.php">Sign Out</a>
   </div>
 

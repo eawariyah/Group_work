@@ -144,12 +144,12 @@
   <main>
     <div class='navBar'>
       <img>
-      <a class='button' href='doctorsHome.html'>Home</a>
-      <a class='button' href='calendar.html'>Calendar</a>
-      <a class='button' href='patientsList.html'>Patients</a>
-      <a class='button' href='doctorsList.html'>View doctors</a>
-      <a class='button' href='createTask.html'>Create an appointment</a>
-      <a class='button' href='patient.html'>Create a patient</a>
+      <a class='button' href='doctorsHome.php'>Home</a>
+      <a class='button' href='calendar.php'>Calendar</a>
+      <a class='button' href='patientsList.php'>Patients</a>
+      <a class='button' href='doctorsList.php'>View doctors</a>
+      <a class='button' href='createTask.php'>Create an appointment</a>
+      <a class='button' href='patient.php'>Create a patient</a>
       <a class='button' href='logout.php' id='signOut'>SignOut</a>
     </div>
 

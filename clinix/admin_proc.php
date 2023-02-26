@@ -58,13 +58,13 @@ if (isset($_POST['login']))
         header("Location: admin_page.php");}
         else {
             //echo error but continue executing the code to close the session
-            header("Location: loginAdmin.html");
+            header("Location: login_page.php");
         }
     
 
 	} else {
 		//echo error but continue executing the code to close the session
-        header("Location: loginAdmin.html");
+        header("Location: login_page.php");
 	}
 
 	//close database connection
@@ -73,7 +73,7 @@ if (isset($_POST['login']))
 else
 {
 	//redirect to login page
-	header("Location: loginAdmin.html");
+	header("Location: login_php.html");
 	exit();
 }
 

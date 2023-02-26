@@ -55,16 +55,16 @@ if (isset($_POST['login']))
 		$_SESSION['urole'] = $finalData['user_role'];
 
 
-        header("Location: nursesHome.html");}
+        header("Location: nursesHome.php");}
         else {
             //echo error but continue executing the code to close the session
-            header("Location: loginNurse.html");
+            header("Location: login_page.php");
         }
     
 
 	} else {
 		//echo error but continue executing the code to close the session
-        header("Location: loginNurse.html");
+        header("Location: login_page.php");
 	}
 
 	//close database connection
@@ -73,7 +73,7 @@ if (isset($_POST['login']))
 else
 {
 	//redirect to login page
-	header("Location: loginDoctor.html");
+	header("Location: login_page.php");
 	exit();
 }
 

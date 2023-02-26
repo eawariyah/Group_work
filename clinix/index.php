@@ -33,27 +33,9 @@
         </div>
         
     </div>
-<a href="loginAdmin.html">
-    <button class="admin_placement" value="Make Appointment" role="button"><b>Admin</b></button>
+<a href="login_page.html">
+    <button class="admin_placement" value="Make Appointment" role="button"><b>Login</b></button>
 </a>
-
-<a href="loginDoctor.html">
-    <button class="doctor_placement" value="Make Appointment" role="button"><b>Doctor</b></button>
-</a>
-
-<a href="loginNurse.html">
-    <button class="nurse_placement" value="Make Appointment" role="button"><b>Nurse</b></button>
-</a>
-
-<!-- <button class="doctor_placement" role="button"><b>Doctor</b></button>
-<button class="nurse_placement" role="button"><b>Nurse</b></button> -->
-
-
-<!-- <td colspan="3">
-    <center>
-    <a href="login.php" >
-        <input type="button" value="Make Appointment" class="login-btn btn-primary btn" style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
-    </a>
 
 </body>
-</html> -->
+</html>

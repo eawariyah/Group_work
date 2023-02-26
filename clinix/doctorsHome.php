@@ -146,21 +146,21 @@
   <main>
     <div class='navBar'>
       <img>
-      <a class='button' href='doctorsHome.html'>Home</a>
-      <a class='button' href='calendar.html'>Calendar</a>
-      <a class='button' href='patientsList.html'>Patients</a>
-      <a class='button' href='nursesList.html'>Nurses</a>
-      <a class='button' href='createTask.html'>Create Task</a>
-      <a class='button' href='patient.html'>A patient</a>
+      <a class='button' href='doctorsHome.php'>Home</a>
+      <a class='button' href='calendar.php'>Calendar</a>
+      <a class='button' href='patientsList.php'>Patients</a>
+      <a class='button' href='nursesList.php'>Nurses</a>
+      <a class='button' href='createTask.php'>Create Task</a>
+      <a class='button' href='patient.php'>A patient</a>
       <a class='button' href='logout.php' id='signOut'>SignOut</a>
     </div>
 
     <div class='navBar2'>
       <button onclick="myFunction()" class="dropbtn">Menu</button>
       <div id="myDropdown" class="dropdown-content">
-        <a href="createAppointment.html">Link 1</a>
-        <a href="landingPage.html">Home</a>
-        <a href="nursesList.html">NursesList</a>
+        <a href="createAppointment.php">Link 1</a>
+        <a href="landingPage.php">Home</a>
+        <a href="nursesList.php">NursesList</a>
       </div>
     </div>
 

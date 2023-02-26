@@ -13,7 +13,7 @@
   <div class='navBar2'>
     <button onclick="myFunction()" class="dropbtn">Menu</button>
     <div id="myDropdown" class="dropdown-content">
-      <a href="createAppointment.html">Link 1</a>
+      <a href="createAppointment.php">Link 1</a>
       <a href="#">Link 2</a>
       <a href="#">Link 3</a>
     </div>
@@ -22,10 +22,10 @@
   <main>
     <div class='navBar'>
       <a class='navButton'>Home</a>
-      <a class='navButton' href='calendar.html'>Calendar</a>
-      <a class='navButton' href='patientsList.html'>Patients</a>
-      <a class=' navButton' href='personsList.html'>Nurses</a>
-      <a class=' navButton' href='createTask.html'>Create Task</a>
+      <a class='navButton' href='calendar.php'>Calendar</a>
+      <a class='navButton' href='patientsList.php'>Patients</a>
+      <a class=' navButton' href='personsList.php'>Nurses</a>
+      <a class=' navButton' href='createTask.php'>Create Task</a>
       <a class='navButton' href="logout.php">SignOut</a>
     </div>
 

@@ -12,7 +12,7 @@
   <div class='navBar'>
     <button onclick="myFunction()" class="dropbtn">Menu</button>
     <div id="myDropdown" class="dropdown-content">
-      <a href="createAppointment.html">Link 1</a>
+      <a href="createAppointment.php">Link 1</a>
       <a href="#">Link 2</a>
       <a href="#">Link 3</a>
     </div>

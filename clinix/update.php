@@ -20,7 +20,6 @@ $result=$conn->query($abc);
     $first_name = $row['FirstName'];
     $last_name = $row['LastName'];
     $employeeemail = $row['Email'];
-    $employeepass = $row['emp_pass'];
     $employeenumber = $row['PhoneNumber'];
     $Gender = $row['Gender'];
     $employeerole = $row['emp_role'];
@@ -32,7 +31,6 @@ if (isset($_POST['Update']))
     $firstname = $_POST['f_name'];
     $lastname = $_POST['l_name'];
     $employee_email = $_POST['employeeEmail'];
-    $employee_pass = $_POST['defaultPassword'];
     $employee_number = $_POST['employeeNumber'];
     $gender = $_POST['genderSelect'];
     $employee_role = $_POST['roleSelect'];
@@ -43,7 +41,7 @@ if (isset($_POST['Update']))
 
     $sql = "UPDATE  employee set emplyee_id=$id,
     FirstName='$firstname', LastName='$lastname',
-    Email='$employee_email', emp_pass='$employee_pass',
+    Email='$employee_email',
     PhoneNumber='$employee_number',Gender='$gender',emp_role='$employee_role',
     Specialization='$speciality' where emplyee_id=$id "; 
     
@@ -85,9 +83,6 @@ $conn->close();
             <label for="employeeEmail">Email Address</label><br>
             <input type="text" name="employeeEmail" class="employeeEmail" id="employeeEmail"value=<?php echo $employeeemail;?>><br>
     
-            <label for="defaultPassword">Password</label><br>
-            <input type="text" name="defaultPassword" class="defaultPassword" id="defaultPassword"value=<?php echo $employeepass;?>><br>
-
             <label for="employeeNumber">Phone Number</label><br>
             <input type="tel" name="employeeNumber" class="employeeNumber" id="employeeNumber"value=<?php echo $employeenumber;?>><br>
 

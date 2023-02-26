@@ -25,10 +25,11 @@ if (isset($_POST['Submit']))
     $employee_role = $_POST['roleSelect'];
     $speciality = $_POST['Speciality'];
 
-    
+    $encrypted_pass = password_hash($employee_pass, PASSWORD_DEFAULT);
+
    //insert the data into the doctor table
 
-    $sql = "INSERT INTO employee(FirstName, LastName,Email, emp_pass,PhoneNumber,Gender,emp_role,Specialization) VALUES ('$firstname', '$lastname', '$employee_email', '$employee_pass','$employee_number','$gender','$employee_role','$speciality')"; 
+    $sql = "INSERT INTO employee(FirstName, LastName,Email, emp_pass,PhoneNumber,Gender,emp_role,Specialization) VALUES ('$firstname', '$lastname', '$employee_email', '$encrypted_pass','$employee_number','$gender','$employee_role','$speciality')"; 
     
     
         if($conn->query($sql) === TRUE){

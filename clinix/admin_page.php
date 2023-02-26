@@ -88,7 +88,7 @@ $res = $conn->query($qry);
       <input type="submit" name="submit" value="Add Data">
     </form> -->
 
-     <h2>Nursery Data</h2>
+     <h2>Nurse Data</h2>
   <table>
     <tr>
       <th>FirstName</th>

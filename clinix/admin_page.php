@@ -8,9 +8,9 @@ $dbname = "clinic_db";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Retrieve data from the database table
-$sql = "SELECT * FROM doctor";
+$sql = "SELECT * FROM employee where emp_role='d'";
 $result = $conn->query($sql);
-$qry = "SELECT * FROM nurses"; 
+$qry = "SELECT * FROM employee where emp_role='n'"; 
 $res = $conn->query($qry);
 
 ?>
@@ -45,23 +45,31 @@ $res = $conn->query($qry);
     <h2>Doctors</h2>
     <table>
       <tr>
-        <th>Doctor_Id</th>
+        <th>ID</th>
         <th>Firstname</th>
         <th>Lastname</th>
-        <th>Room_office</th>
-        <th>Register</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Gender</th>
+        <th>Specialization</th>
       </tr>
       <?php
       if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
           echo "<tr>
-                 <td>". $row["Doctor_Id"]. "</td>
-                 <td>".$row["Firstname"]."</td>
-                 <td>".$row["Lastname"]."</td>
-                 <td>".$row["Room_office"]."</td>
+                 <td>".$row["emplyee_id"]."</td>
+                 <td>". $row["FirstName"]. "</td>
+                 <td>".$row["LastName"]."</td>
+                 <td>".$row["Email"]."</td>
+                 <td>".$row["PhoneNumber"]."</td>
+                 <td>".$row["Gender"]."</td>
+                 <td>".$row["Specialization"]."</td>
                  
-                 <td><a href='Update.php?doctor_id=".$row["Doctor_Id"]."'>delete</a></td>
+                 <td><button><a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a></button></td>
+                 <td><button><a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a></button>
+                 </td>
                  </tr>";
+                //  <td><a href='Update.php?doctor_id=".$row["Doctor_Id"]."'>delete</a></td>
                 //  <td><a href='Update.php?doctor_id=".$row["update"]."'>update</a></td>
         }
         
@@ -72,35 +80,42 @@ $res = $conn->query($qry);
       }
       ?>
     </table>
-    <form method="post" action="add_doctor.php">
+    <!-- <form method="post" action="add_doctor.php">
       <input type="text" name="Doctor_Id" placeholder="Enter ID">
       <input type="text" name="Firstname" placeholder="Enter First name">
       <input type="text" name="Lastname" placeholder="Enter Last name">
       <input type="number" name="Room_office" placeholder="Enter room number">
       <input type="submit" name="submit" value="Add Data">
-    </form>
+    </form> -->
 
-     <h2>Nursery Data</h2>
+     <h2>Nurse Data</h2>
   <table>
     <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Nurse ID</th>
-      <th>Telephone</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Email</th>
+      <th>PhoneNumber</th>
+      <th>Gender</th>
+      
     </tr>
     <?php
     // code to retrieve data from "nursery" table
     if ($res->num_rows > 0) {
         while($row = $res->fetch_assoc()) {
           echo "<tr>
+            <td>".$row["emplyee_id"]."</td>   
+            <td>". $row["FirstName"]. "</td>
+            <td>".$row["LastName"]."</td>
+            <td>".$row["Email"]."</td>
+            <td>".$row["PhoneNumber"]."</td>
+            <td>".$row["Gender"]."</td>
+            <td><button><a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a></button></td>
+                 <td><button><a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a></button>
+                 </td>
+          
+          </tr>";
                  
-                 <td>".$row["Fname"]."</td>
-                 <td>".$row["Lname"]."</td>
-                 <td>". $row["Nurse_Id"]. "</td>
-                 <td>".$row["Tel_number"]."</td>
-                 </tr>";
-                //  <td><a href='Update.php?doctor_id=".$row["Doctor_Id"]."'>delete</a></td>
-                //  <td><a href='Update.php?doctor_id=".$row["Doctor_Id"]."'>update</a></td>
+                
         }
       } else {
         echo "<tr>
@@ -110,13 +125,13 @@ $res = $conn->query($qry);
     ?>
   </table>
 
-  <form method="post" action="add_nurse.php">
+  <!-- <form method="post" action="add_nurse.php">
     <input type="text" name="Fname" placeholder="Enter First name">
     <input type="text" name="Lname" placeholder="Enter Last name">
     <input type="text" name="Nurse_Id" placeholder="Enter new ID">
     <input type="number" name="Tel_number" placeholder="Enter Telephone Number">
     <input type="submit" name="submit" value="Add Data">
-  </form>
+  </form> -->
 </div>
 
  

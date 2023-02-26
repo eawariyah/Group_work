@@ -7,13 +7,19 @@ html, body{
   box-sizing: border-box;
 }
 .searchBar{
-  width: 40%;
+  position: absolute;
+  top: 26%;
+  left: 21%;
+  width: 39%;
   height: 30px;
   opacity: 80%;
   background-color: white;
-  border-radius: 1em;
+  border-radius: 0.5em;
   border: none;
   padding-left: 1em;
+  /* border: 0.5px solid #0000009f; */
+  border-radius: 7px;
+  box-shadow: 0 3px 5px 0 rgb(95 95 97 / 30%);
 }
 .navBar{
   display: flex;
@@ -121,6 +127,28 @@ main{
   padding-top: 2em;
   height: 30%;
 }
+
+#pageName{
+  position: absolute;
+  top: 2%;
+  left: 21%;
+  font-weight: 900;
+  font-size: 2em;
+  font-family: 'Inter';
+
+}
+
+#welcomeNote{
+  position: absolute;
+  top: 12%;
+  left: 21%;
+  font-weight: 700;
+  font-size: 2em;
+  font-family: 'Inter';
+  color: #656565;
+
+}
+
 #informationBlock3{
   position: absolute;
   right: 21.5%;
@@ -130,6 +158,9 @@ main{
   border-radius: 5px;
   border: none;
   height: 20%;
+  /* border: 0.5px solid #0000009f; */
+  border-radius: 7px;
+  /* box-shadow: 0 3px 5px 0 rgb(95 95 97 / 30%); */
 }
 #informationBlock4{
   position: absolute;
@@ -140,6 +171,9 @@ main{
   border-radius: 5px;
   border: none;
   height: 20%;
+  /* border: 0.5px solid #0000009f; */
+  border-radius: 7px;
+  /* box-shadow: 0 3px 5px 0 rgb(95 95 97 / 30%); */
 }
 #informationBlock1{
   position: absolute;
@@ -150,6 +184,9 @@ main{
   border-radius: 5px;
   border: none;
   height: 20%;
+  /* border: 0.5px solid #0000009f; */
+  border-radius: 7px;
+  /* box-shadow: 0 3px 5px 0 rgb(95 95 97 / 30%); */
 }
 #informationBlock2{
   position: absolute;
@@ -160,10 +197,18 @@ main{
   border-radius: 5px;
   border: none;
   height: 20%;
+  /* border: 0.5px solid #0000009f; */
+  border-radius: 7px;
+  /* box-shadow: 0 3px 5px 0 rgb(95 95 97 / 30%); */
 }
 .canvas{
-  width: 50%;
+  position: absolute;
+  height: 63.5%;
+  width: 38.5%;
   background-color: white;
+  border: 0.5px solid #b4b4b4;
+  border-radius: 7px;
+  /* box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3); */
 }
 
 :root {
@@ -393,5 +438,18 @@ main{
  #date_val{
   display: none;
  }
+ .searchBar{
+  display: none;
+ }
+ #pageName{
+  display: none;
+}
+
+#welcomeNote{
+display: none;
+}
+#date_values{
+  display: none;
+}
 
 }

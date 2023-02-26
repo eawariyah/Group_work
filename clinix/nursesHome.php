@@ -34,6 +34,11 @@
 
     <div class='tools'>
     <div class='informationBar'>
+      <div>
+        <h1 id="pageName">Home</h1>
+        <p id="welcomeNote">Welcome!</p>
+        <!-- <p id="pageName">Home</p> -->
+      </div>
         <div class='informationBlock' id='informationBlock1'>
             <i class='fa fa-info-circle' style="font-size:24px;"></i>
             <h2>Information Block 1</h2>

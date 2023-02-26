@@ -5,10 +5,13 @@ if (isset($_POST['Submit']))
     $username = "root";
     $password = "";
     $dbname = "clinic_db";
-    $conn= mysqli_connect($servername, $username, $password, $dbname);
-    if(!$conn){
-        echo "There are some problem while connecting the data";
-    }
+    $conn = new mysqli($servername, $username, $password, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+		//stop executing the code and echo error
+	  die("Connection failed: " . $conn->connect_error);
+	} 
+
 
 //check if the form has been submitted 
 
@@ -35,9 +38,10 @@ if (isset($_POST['Submit']))
         else {echo "Error: " . $sql . "<br>" . $conn->error;
          
     }
+    $conn->close();
 }
 else{
     echo"error"; 
 }
-$conn->close();;
+
 ?>

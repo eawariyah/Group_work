@@ -30,7 +30,7 @@ if (isset($_POST['login']))
 	//write query
 	//user role (1 is admin, 2 is standard user)
 	//user status( 1 is active, 2 is inactive)
-	$sql = "SELECT * FROM user_table WHERE user_name = '$user_name'";
+	$sql = "SELECT * FROM employee WHERE Email = '$user_name'";
 
 	// check if query worked
 	if ($exeResult = $conn->query($sql)) {
@@ -48,20 +48,20 @@ if (isset($_POST['login']))
 	  	// echo '<br>';
 
 	  	//check for password
-	  if(	password_verify($user_pass, $finalData['user_pass'])){
+	  if(	password_verify($user_pass, $finalData['emp_pass'])){
 		
 		session_start();
-		$_SESSION['uid'] = $finalData['user_id'];
-		$_SESSION['urole'] = $finalData['user_role'];
+		$_SESSION['uid'] = $finalData['emplyee_id'];
+		$_SESSION['urole'] = $finalData['emp_role'];
 
-        if($_SESSION['urole']==1){
+        if($_SESSION['urole']=='a'){
         header("Location: admin_page.php");}
 
-		if($_SESSION['urole']==2){
+		if($_SESSION['urole']=='d'){
 			header("Location: doctorsHome.php");
 		}
 
-		if ($_SESSION['urole']==3){
+		if ($_SESSION['urole']=='n'){
 			header("Location: nursesHome.php");}
 	  }
         else {

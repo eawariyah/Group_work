@@ -33,7 +33,7 @@
         </div>
         
     </div>
-<a href="login_page.html">
+<a href="login_page.php">
     <button class="admin_placement" value="Make Appointment" role="button"><b>Login</b></button>
 </a>
 

@@ -54,11 +54,19 @@ if (isset($_POST['login']))
 		$_SESSION['uid'] = $finalData['user_id'];
 		$_SESSION['urole'] = $finalData['user_role'];
 
+        if($_SESSION['urole']==1){
+        header("Location: admin_page.php");}
 
-        header("Location: doctorsHome.php");}
+		if($_SESSION['urole']==2){
+			header("Location: doctorsHome.php");
+		}
+
+		if ($_SESSION['urole']==3){
+			header("Location: nursesHome.php");}
+	  }
         else {
             //echo error but continue executing the code to close the session
-            header("Location: login_page.php");
+			echo "Error login : " . $sql . "<br>" . $conn->error;
         }
     
 

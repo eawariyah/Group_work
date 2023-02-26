@@ -18,7 +18,7 @@ $res = $conn->query($qry);
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Display Data</title>
+  <title>Admin</title>
   <link rel="stylesheet" href="admin.css">
 </head>
 <body>
@@ -42,7 +42,7 @@ $res = $conn->query($qry);
        <h2>This is the right side.</h2>
     </div>
    <div class = "left">
-    <h2>Display Data</h2>
+    <h2>Doctors</h2>
     <table>
       <tr>
         <th>Doctor_Id</th>

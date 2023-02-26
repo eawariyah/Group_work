@@ -12,7 +12,7 @@
 <body>
   
 
-  <form action="admin_proc.php" method="POST" onsubmit="return validate()">
+  <form action="login_proc.php" method="POST" onsubmit="return validate()">
     <img src='assets/logo.jpg' id='logo'>
     <p id='welcomeBack'><b>Welcome back!</b></p>
     <p class='mmm'>Login with your details to continue</p>

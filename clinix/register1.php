@@ -63,7 +63,7 @@
 			     //check if action was successful
 			     if(this.responseText == 'success')
 			     {
-			     	window.location.href = 'loginDoctor.html';
+			     	window.location.href = 'login_page.php';
 			     }
 			     else
 			     {

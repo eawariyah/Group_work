@@ -13,12 +13,19 @@
   <input type='text' name='search' placeholder="search" class='searchBar'>
   <main>
     <div class='navBar'>
+      <div class="image_placeholder">
+        <img src="">
+      </div>
+      <div class="name_placeholder">
+        <b id="Fname">Fname lname</b>
+      </div>
+      <b id="emailVal">Fname.lname@abc.com</b>
       <img>
       <a class='button' id = "doctorsHomepg"; href='doctorsHome.php'>Home</a>
       <a class='button' id = "calendarpg"; href='calendar.php'>Calendar</a>
       <a class='button' id = "patientsListpg"; href='patientsList.php'>Patients</a>
       <a class='button' id = "nursesListpg"; href='nursesList.php'>View Doctors</a>
-      <a class='button' id = "createTaskpg"; href='createTask.php'>Create an Appointment</a>
+      <a class='button' id = "createTaskpg"; href='createTask.php'>Create Appointment</a>
       <a class='button' id = "patientpg"; href='patient.php'>Create a patient</a>
       <a class='button' href='logout.php' id='signOut'>SignOut</a>
     </div>

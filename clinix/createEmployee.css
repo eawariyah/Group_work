@@ -1,6 +1,5 @@
 body{
     background-color: #eef1f0;
-    overflow-y: scroll;
 }
 #popupform {
     position: fixed;

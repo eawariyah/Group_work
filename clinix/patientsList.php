@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
   <link href="personsList.css" rel="stylesheet" type="text/css" />
+  <link href="doctorsNursesHome.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
@@ -13,13 +15,13 @@
   <main>
     <div class='navBar'>
       <img>
-      <a class='button' href='patientsList.php'>Home</a>
-      <a class='button' href='calendar.php'>Calendar</a>
-      <a class='button' href='patientsList.php'>Patients</a>
-      <a class='button' href='nursesList.php'>Nurses</a>
-      <a class='button' href='createTask.php'>Create Task</a>
-      <a class='button' href='patient.php'>A patient</a>
-      <a class='button'>SignOut</a>
+      <a class='button' id = "doctorsHomepg"; href='doctorsHome.php'>Home</a>
+      <a class='button' id = "calendarpg"; href='calendar.php'>Calendar</a>
+      <a class='button' id = "patientsListpg"; href='patientsList.php'>Patients</a>
+      <a class='button' id = "nursesListpg"; href='nursesList.php'>View Doctors</a>
+      <a class='button' id = "createTaskpg"; href='createTask.php'>Create an Appointment</a>
+      <a class='button' id = "patientpg"; href='patient.php'>Create a patient</a>
+      <a class='button' href='logout.php' id='signOut'>SignOut</a>
     </div>
 
     <div class='navBar2'>

@@ -14,12 +14,12 @@
   <main>
     <div class='navBar'>
       <img>
-      <a class='button' href='doctorsHome.php'>Home</a>
-      <a class='button' href='calendar.php'>Calendar</a>
-      <a class='button' href='patientsList.php'>Patients</a>
-      <a class='button' href='nursesList.php'>View Doctors</a>
-      <a class='button' href='createTask.php'>Create an Appointment</a>
-      <a class='button' href='patient.php'>Create a patient</a>
+      <a class='button' id = "doctorsHomepg"; href='doctorsHome.php'>Home</a>
+      <a class='button' id = "calendarpg"; href='calendar.php'>Calendar</a>
+      <a class='button' id = "patientsListpg"; href='patientsList.php'>Patients</a>
+      <a class='button' id = "nursesListpg"; href='nursesList.php'>View Doctors</a>
+      <a class='button' id = "createTaskpg"; href='createTask.php'>Create an Appointment</a>
+      <a class='button' id = "patientpg"; href='patient.php'>Create a patient</a>
       <a class='button' href='logout.php' id='signOut'>SignOut</a>
     </div>
 

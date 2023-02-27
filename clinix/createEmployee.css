@@ -1,5 +1,6 @@
 body{
     background-color: #eef1f0;
+    overflow-y: scroll;
 }
 #popupform {
     position: fixed;
@@ -35,6 +36,7 @@ body{
     width: 20%;
     height:85%;
     background-color: rgb(240, 240, 240);
+    overflow-y: scroll;
 }
 
 .container .f_name, .l_name, .employeeEmail, .employeeNumber, .defaultPassword{

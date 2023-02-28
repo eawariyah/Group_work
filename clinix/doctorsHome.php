@@ -8,15 +8,20 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    </head>
    <body>
+
       <input type='text' name='search' placeholder="search" class='searchBar'>
+
       <main>
-      <div class='navBar'>
+         
+         <div class='navBar'>
       <div class="image_placeholder">
         <img src="">
       </div>
+
       <div class="name_placeholder">
         <b id="Fname">Fname lname</b>
       </div>
+
       <b id="emailVal">Fname.lname@abc.com</b>
          <img>
          <a class='button' id = "doctorsHomepg" href='doctorsHome.php'>Home</a>
@@ -27,12 +32,16 @@
          <a class='button' id="patientpg" href='patient.php'>A patient</a>
          <a class='button' href='logout.php' id='signOut'>SignOut</a>
       </div>
+
       <div class='navBar2'>
          <button onclick="myFunction()" class="dropbtn">Menu</button>
          <div id="myDropdown" class="dropdown-content">
-            <a href="createAppointment.php">Link 1</a>
-            <a href="landingPage.php">Home</a>
-            <a href="nursesList.php">NursesList</a>
+         <a href='doctorsHome.php'>Home</a>
+         <a href='calendar.php'>Calendar</a>
+         <a href='patientsList.php'>Patients</a>
+         <a href='nursesList.php'>Nurses</a>
+         <a href='createTask.php'>Create Task</a>
+         <a href='patient.php'>A patient</a>
          </div>
       </div>
       <div class='tools'>
@@ -73,6 +82,7 @@
               <p style="position: absolute;  font-weight:400; color: '#777777'; top: 1%;  right: 6%; font-family: 'Inter', sans-serif;">Today's Date</p>
             </div>
             <div class="box">
+               <img src="calendar.svg" id="calendarImg">
                <div class="date">
                   <div id="day"></div>
                   <div id="daymonth"></div>

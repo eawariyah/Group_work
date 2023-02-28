@@ -6,32 +6,44 @@
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
   <link href="personsList.css" rel="stylesheet" type="text/css" />
+  <link href="doctorsNursesHome.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
-  <div class='navBar2'>
+  <div class='navBar2' id="navBar2">
     <button onclick="myFunction()" class="dropbtn">Menu</button>
     <div id="myDropdown" class="dropdown-content">
-      <a href="createAppointment.php">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+      <a href='doctorsHome.php'>Home</a>
+      <a href='calendar.php'>Calendar</a>
+      <a href='patientsList.php'>Patients</a>
+      <a href='nursesList.php'>Nurses</a>
+      <a href='createTask.php'>Create Task</a>
+      <a href='patient.php'>A patient</a>
     </div>
   </div>
 
-  <input type='text' name='search' placeholder="search" class='searchBar'>
+  <!-- <input type='text' name='search' placeholder="search" class='searchBar'> -->
   <main>
     <div class='navBar'>
-      <img>
-      <a class='button'>Home</a>
-      <a class='button' href='calendar.html'>Calendar</a>
-      <a class='button' href='patientsList.html'>Patients</a>
-      <a class='button' href='nursesList.html'>Nurses</a>
-      <a class='button' href='createTask.html'>Create Task</a>
-      <a class='button' href='patient.html'>A patient</a>
-      <a class='button'>SignOut</a>
-    </div>
+      <div class="image_placeholder">
+        <img src="">
+      </div>
+      <div class="name_placeholder">
+        <b id="Fname">Fname lname</b>
+      </div>
+      <b id="emailVal">Fname.lname@abc.com</b>
+         <img>
+      <a class='button' id = "doctorsHomepg" href='doctorsHome.php'>Home</a>
+         <a class='button' id="calendarpg" href='calendar.php'>Calendar</a>
+         <a class='button' id="patientsListpg" href='patientsList.php'>Patients</a>
+         <a class='button' id="nursesListpg" href='nursesList.php'>Nurses</a>
+         <a class='button' id="createTaskpg" href='createTask.php'>Create Task</a>
+         <a class='button' id="patientpg" href='patient.php'>A patient</a>
+         <a class='button' href='logout.php' id='signOut'>SignOut</a>
+      </div>
 
-    <div class='personGrid'>
+    <!-- <div class='personGrid'>
       <div class='person'>
         <img src="img.jpg" alt="John" style="width:100%">
         <h1>Jilly Doe</h1>
@@ -72,7 +84,7 @@
         <p class="title">CEO & Founder, Example</p>
         <p>James University</p>
         <p><button>ViewSchedule</button></p>
-      </div>
+      </div> -->
     </div>
   </main>
 

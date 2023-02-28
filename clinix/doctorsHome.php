@@ -73,6 +73,7 @@
               <p style="position: absolute;  font-weight:400; color: '#777777'; top: 1%;  right: 6%; font-family: 'Inter', sans-serif;">Today's Date</p>
             </div>
             <div class="box">
+               <img src="calendar.svg" id="calendarImg">
                <div class="date">
                   <div id="day"></div>
                   <div id="daymonth"></div>

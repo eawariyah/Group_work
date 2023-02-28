@@ -58,7 +58,13 @@ html, body{
   background-color: #1e1f26;
   border-radius: 100%;
 }
-
+#calendarImg{
+  position: absolute;
+  top: -2%;
+  right: 1%;
+  width: 4%;
+  height: 17%;
+}
 .name_placeholder{
   position: absolute;
   top: 17%;

@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
   <link href="personsList.css" rel="stylesheet" type="text/css" />
+  <link href="doctorsNursesHome.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
@@ -21,15 +23,22 @@
   <input type='text' name='search' placeholder="search" class='searchBar'>
   <main>
     <div class='navBar'>
-      <img>
-      <a class='button'>Home</a>
-      <a class='button' href='calendar.html'>Calendar</a>
-      <a class='button' href='patientsList.html'>Patients</a>
-      <a class='button' href='nursesList.html'>Nurses</a>
-      <a class='button' href='createTask.html'>Create Task</a>
-      <a class='button' href='patient.html'>A patient</a>
-      <a class='button'>SignOut</a>
-    </div>
+      <div class="image_placeholder">
+        <img src="">
+      </div>
+      <div class="name_placeholder">
+        <b id="Fname">Fname lname</b>
+      </div>
+      <b id="emailVal">Fname.lname@abc.com</b>
+         <img>
+      <a class='button' id = "doctorsHomepg" href='doctorsHome.php'>Home</a>
+         <a class='button' id="calendarpg" href='calendar.php'>Calendar</a>
+         <a class='button' id="patientsListpg" href='patientsList.php'>Patients</a>
+         <a class='button' id="nursesListpg" href='nursesList.php'>Nurses</a>
+         <a class='button' id="createTaskpg" href='createTask.php'>Create Task</a>
+         <a class='button' id="patientpg" href='patient.php'>A patient</a>
+         <a class='button' href='logout.php' id='signOut'>SignOut</a>
+      </div>
 
     <div class='personGrid'>
       <div class='person'>

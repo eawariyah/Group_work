@@ -11,16 +11,19 @@
 </head>
 
 <body>
-  <div class='navBar2'>
+  <div class='navBar2' id="navBar2">
     <button onclick="myFunction()" class="dropbtn">Menu</button>
     <div id="myDropdown" class="dropdown-content">
-      <a href="createAppointment.php">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+      <a href='doctorsHome.php'>Home</a>
+      <a href='calendar.php'>Calendar</a>
+      <a href='patientsList.php'>Patients</a>
+      <a href='nursesList.php'>Nurses</a>
+      <a href='createTask.php'>Create Task</a>
+      <a href='patient.php'>A patient</a>
     </div>
   </div>
 
-  <input type='text' name='search' placeholder="search" class='searchBar'>
+  <!-- <input type='text' name='search' placeholder="search" class='searchBar'> -->
   <main>
     <div class='navBar'>
       <div class="image_placeholder">
@@ -40,7 +43,7 @@
          <a class='button' href='logout.php' id='signOut'>SignOut</a>
       </div>
 
-    <div class='personGrid'>
+    <!-- <div class='personGrid'>
       <div class='person'>
         <img src="img.jpg" alt="John" style="width:100%">
         <h1>Jilly Doe</h1>
@@ -81,7 +84,7 @@
         <p class="title">CEO & Founder, Example</p>
         <p>James University</p>
         <p><button>ViewSchedule</button></p>
-      </div>
+      </div> -->
     </div>
   </main>
 

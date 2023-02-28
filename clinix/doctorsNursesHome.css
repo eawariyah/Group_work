@@ -101,8 +101,10 @@ html, body{
   background-color: #2980B9;
 }
 .navBar2{
-  position: relative;
+  /* position: relative; */
   display: inline-block;
+  position: absolute;
+  top: 0%;
 }
 .dropdown-content {
   display: none;

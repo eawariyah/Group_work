@@ -14,9 +14,12 @@
   <div class='navBar2'>
     <button onclick="myFunction()" class="dropbtn">Menu</button>
     <div id="myDropdown" class="dropdown-content">
-      <a href="createAppointment.php">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+      <a href='doctorsHome.php'>Home</a>
+      <a href='calendar.php'>Calendar</a>
+      <a href='patientsList.php'>Patients</a>
+      <a href='nursesList.php'>Nurses</a>
+      <a href='createTask.php'>Create Task</a>
+      <a href='patient.php'>A patient</a>
     </div>
   </div>
 

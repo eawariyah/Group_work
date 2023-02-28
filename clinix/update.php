@@ -14,8 +14,10 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 $id=$_GET['updateid'];
 
+//  echo $id;
+
 $abc="SELECT * from employee where emplyee_id=$id ";
-$result=$conn->query($abc);
+    $result=$conn->query($abc);
     $row=mysqli_fetch_assoc($result);
     $first_name = $row['FirstName'];
     $last_name = $row['LastName'];
@@ -24,6 +26,7 @@ $result=$conn->query($abc);
     $Gender = $row['Gender'];
     $employeerole = $row['emp_role'];
     $specialization = $row['Specialization'];
+
 
 if (isset($_POST['Update'])) 
 {
@@ -39,20 +42,15 @@ if (isset($_POST['Update']))
     
    //insert the data into the doctor table
 
-    $sql = "UPDATE  employee set emplyee_id=$id,
-    FirstName='$firstname', LastName='$lastname',
-    Email='$employee_email',
-    PhoneNumber='$employee_number',Gender='$gender',emp_role='$employee_role',
-    Specialization='$speciality' where emplyee_id=$id "; 
+    $sql = "UPDATE employee set emplyee_id='$id',
+    FirstName='$firstname', LastName='$lastname', Email='$employee_email', PhoneNumber='$employee_number',Gender='$gender',emp_role='$employee_role', Specialization='$speciality' where emplyee_id='$id'"; 
     
     
-        if($conn->query($sql) ){
-            header("Location : admin_page.php");
-            exit();
-        }
-        else {echo "Error: " . $sql . "<br>" . $conn->error;
-         
+    if($conn->query($sql) ){
+        header("Location: admin_page.php");
+        exit();
     }
+    else {echo "Error: " . $sql . "<br>" . $conn->error;}
     
 }
 

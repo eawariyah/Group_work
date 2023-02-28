@@ -26,7 +26,7 @@
       <a class='button' id = "patientsListpg"; href='patientsList.php'>Patients</a>
       <a class='button' id = "nursesListpg"; href='nursesList.php'>View Doctors</a>
       <a class='button' id = "createTaskpg"; href='createTask.php'>Create Appointment</a>
-      <a class='button' id = "patientpg"; href='patient.php'>Create a patient</a>
+      <a class='button' id = "patientpg"; href='createPatient.php'>Create a patient</a>
       <a class='button' href='logout.php' id='signOut'>SignOut</a>
     </div>
 

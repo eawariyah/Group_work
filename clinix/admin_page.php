@@ -48,11 +48,17 @@
 
             <div class='numberPatients' id='numberPatients'>
                <i class='fa fa-warning' style="font-size:24px;"></i>
-               <h2>Information Block 2</h2>
+               <h2>Number of patients</h2>
                <!-- <p>Here is some information.</p> -->
             </div>
 
-            <div class = "left">
+            <div class='numberDoctors' id='numberDoctors'>
+               <i class='fa fa-warning' style="font-size:24px;"></i>
+               <h2>Number of doctors</h2>
+               <!-- <p>Here is some information.</p> -->
+            </div>
+
+            <!-- <div class = "left"> -->
                <h2>Doctors</h2>
                <table id = 'doctorTable'>
                   <tr>
@@ -91,14 +97,6 @@
                      }
                      ?>
                </table>
-
-               <!-- <form method="post" action="add_doctor.php">
-                  <input type="text" name="Doctor_Id" placeholder="Enter ID">
-                  <input type="text" name="Firstname" placeholder="Enter First name">
-                  <input type="text" name="Lastname" placeholder="Enter Last name">
-                  <input type="number" name="Room_office" placeholder="Enter room number">
-                  <input type="submit" name="submit" value="Add Data">
-                  </form> -->
                   
                <h2>Nurse Data</h2>
                <table id="nurseTable">

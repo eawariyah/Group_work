@@ -6,6 +6,50 @@ html, body {
 *{
   box-sizing: border-box;
 }
+#nurseTable{
+  position: absolute;
+  bottom: 68%;
+  left: 21%;
+  width: 78%;
+  height: 20%;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.content {
+  margin-left: 200px;
+  padding: 50px;
+  top: 0;  
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #656565;
+  color: white;
+}
+
+input[type=text], input[type=submit] {
+  padding: 6px;
+  margin: 10px;
+  border: none;
+  border-radius: 3px;
+}
+
+input[type=submit] {
+  background-color: #03989E;
+  color: white;
+  cursor: pointer;
+}
 
 body{
   padding-left: 1em;
@@ -31,9 +75,6 @@ body{
   padding-bottom: 1em;
 }
 
-.avatar{
-  padding-left: 2em;
-}
 
 .navBar > a{
   text-decoration: none;
@@ -63,54 +104,6 @@ main{
   display: flex;
   flex-direction: row;
   padding-top: 1em;
-}
-
-.personGrid{
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 1em;
-  width: 70%;
-  margin: 0 auto;
-  padding-top: 2em;
-}
-
-.person{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  text-align: center;
-  word-wrap: break-word;      
-}
-
-.title {
-  color: grey;
-  font-size: 18px;
-}
-
-.person > p > button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-
-.person > p > button:hover{
-  opacity: 0.7;
-}
-
-.person > img{
-  height: 10%;
-  width: 10%;
-}
-
-.person > h1{
-  font-size: 20px;
 }
 
 @media only screen and (max-width: 600px) {

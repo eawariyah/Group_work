@@ -32,7 +32,7 @@
             <input type="text" name="height" class="defaultPassword" id="height"><br>
 
             <label for="Weight">Weight</label><br>
-            <input type="text" name="Weight" class="defaultPassword" id="Weight"><br>
+            <input type="text" name="weight" class="defaultPassword" id="Weight"><br>
 
             <label for="bloodgroup">BloodGroup</label><br>
             <input type="text" name="bloodgroup" class="defaultPassword" id="bloodgroup"><br>
@@ -41,7 +41,7 @@
             <input type="text" name="history" class="defaultPassword" id="history"><br>
 
             <label for="genderSelect">Gender</label><br>
-            <select id="genderSelect" class="genderSelect" name="genderSelect"><br>
+            <select id="genderSelect" class="genderSelect" name="gender"><br>
                 <option value="male">Gender</option>
                 <option value="male">male</option>
                 <option value="female">female</option>

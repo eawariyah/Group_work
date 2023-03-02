@@ -9,10 +9,10 @@ html, body {
 
 .searchBar1 {
   position: absolute;
-  top: 2%;
+  top: 1.7%;
   left: 21%;
   width: 38.5%;
-  height: 30px;
+  height: 6%;
   opacity: 80%;
   background-color: white;
   border-radius: 0.5em;

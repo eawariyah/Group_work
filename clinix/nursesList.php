@@ -80,8 +80,7 @@
                     <td>".$row["Email"]."</td>
                     <td>".$row["PhoneNumber"]."</td>
                     <td>".$row["Gender"]."</td>
-                    <td><button><a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a></button></td>
-                        <td><button><a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a></button>
+                   
                         </td>
                   
                   </tr>";
@@ -93,6 +92,8 @@
                       <td colspan='3'>No data found</td>
                       </tr>";
               }
+              // <td><button><a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a></button></td>
+              //<td><button><a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a></button>
             ?>
       </table>
 

@@ -57,7 +57,9 @@
       </div>
     </div>
     
+    <a class='button' id = "addnurse" href='createPatient.php'>Add Patient</a>
     <div class = "left">
+    
                <h2>Patients</h2>
                <table id = 'doctorTable'>
                   <tr>
@@ -84,7 +86,7 @@
                                 <td>".$row["Gender"]."</td>
                                 <td>".$row["DOB"]."</td>
                                 <td>".$row["Height"]."</td>
-                                <td>".$row["Weight"]."</td>
+                                <td>".$row["Patient_weight"]."</td>
                                 <td>".$row["Ethnicity"]."</td>
                                 <td>".$row["BloodGroup"]."</td>
                                 <td>".$row["MedicalHistory"]."</td>

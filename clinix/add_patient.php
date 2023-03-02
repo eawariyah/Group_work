@@ -31,9 +31,9 @@ if (isset($_POST['Submit']))
 
    
 
-   //insert the data into the doctor table
+   //insert the data into the patient table
 
-    $sql = "INSERT INTO patients(Firstname, Lastname, Gender, DOB, Height, Weight, Ethnicity, BloodGroup, MedicalHistory, Email, PhoneNumber) 
+    $sql = "INSERT INTO patients(Firstname, Lastname, Gender, DOB, Height, Patient_weight, Ethnicity, BloodGroup, MedicalHistory, Email, PhoneNumber) 
     VALUES ( '$firstname', '$lastname', '$patient_gender', '$patient_DOB', '$patient_height', '$patient_weight', '$patient_ethnicity', '$patient_bloodgroup', '$patient_history', '$patient_email', '$patient_number')"; 
     
     

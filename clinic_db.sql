@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 26, 2023 at 09:33 PM
+-- Generation Time: Mar 03, 2023 at 12:10 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -136,7 +136,13 @@ INSERT INTO `employee` (`emplyee_id`, `FirstName`, `LastName`, `Email`, `emp_pas
 (11, 'Ernestina', 'Torto', 'ernest.torto@clinic.com', '$2y$10$30Stq58GfvbtAJqHdnR4LeoPfRVyb91RRs4O6HiMuCB65.3obYsd.', '1234567', 'female', 'd', 'Immunology'),
 (12, 'Dorcas', 'Torto', 'dorcas.adjei@clinic.com', '$2y$10$Ubo.aDMXYN7Hds3HaZt7f.AS4lhKHToU8hhw0w93Gz8yW1ONY8Z7S', '23456789098755', 'female', 'a', NULL),
 (13, 'Dorcas', 'Torto', 'dorcas.adjei@clinic.com', '$2y$10$coli8TDswx7L6OKHlimFguVkYpfp0Vt0ihakPogwoM6B6Ixgt2zKC', '23456789098755', 'female', 'a', NULL),
-(14, 'Ernestina', 'Adjei', 'ernestina.adjei@clinic.com', '$2y$10$lZABX38CLz7xGCVpVdrWGOk3Er.94e.7ac8BDP9FLG4mNIm8LaA5a', '23456789098755', 'female', 'a', 'none');
+(14, 'Ernestina', 'Adjei', 'ernestina.adjei@clinic.com', '$2y$10$lZABX38CLz7xGCVpVdrWGOk3Er.94e.7ac8BDP9FLG4mNIm8LaA5a', '23456789098755', 'female', 'a', 'none'),
+(21, 'Dorcas', 'Jean', 'dorcas.jean@clinix.com', '$2y$10$XW/FUw8JYWSU7wc51WuuI.vzR91E43FbHtUCmYvwrexB5SUBC2wPq', '123456789876', 'female', 'n', 'none'),
+(22, 'Ernestina', 'Jean', 'tina.jean@clinic.com', '$2y$10$29DMpC9FV/uSlKTU4PlRY.P49QHKV0ou41wKHS8adwS0jER/Oymv.', '23454323456', 'female', 'n', 'none'),
+(23, 'Averch', 'Jean', 'averch.jean@clinic.com', '$2y$10$s1jrd.Uzd66VGK4sQY.8LuqKNLN2wypyAMYBBYZpZKu/vTr74y/qq', '1234567', 'male', 'n', 'none'),
+(24, 'Edwin', 'Awariyah', 'edwin.awariyah@clinic.com', '$2y$10$bUqZ6XfpcCoFSe6cdBH9Aud6keyMa/dZQ7joG3NsShiPtXM13.R5O', '2345678987654', 'male', 'a', 'none'),
+(25, 'Nice', 'Cailie', 'nice.cailie@clinic.com', '$2y$10$Q5xrf0C8yN6L5YI9RvxF4eJjcyzByVJAbhwsu7jquYs4pIbbOXpxi', '1234567', 'female', 'n', 'none'),
+(26, 'Ella', 'Addy', 'ella.addy@clinic.com', '$2y$10$/G8HHT/Uy2cdt6jDCKouWuxChs1xaSIEt182GdNlkZU.adcbolkbi', '23456789134', 'female', 'n', 'none');
 
 -- --------------------------------------------------------
 
@@ -177,6 +183,27 @@ CREATE TABLE `nurses_tasks` (
   `end_time` time NOT NULL,
   `description` varchar(255) NOT NULL,
   `task_status` varchar(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `patients`
+--
+
+CREATE TABLE `patients` (
+  `Patient_Id` int(11) NOT NULL,
+  `Firstname` varchar(30) DEFAULT NULL,
+  `Lastname` varchar(30) DEFAULT NULL,
+  `Gender` varchar(6) NOT NULL,
+  `DOB` date DEFAULT NULL,
+  `Height` decimal(10,0) DEFAULT NULL,
+  `Patient_weight` decimal(10,0) NOT NULL,
+  `Ethnicity` varchar(50) DEFAULT NULL,
+  `BloodGroup` char(3) NOT NULL,
+  `MedicalHistory` varchar(10000) NOT NULL,
+  `Email` varchar(255) NOT NULL,
+  `PhoneNumber` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -235,6 +262,12 @@ ALTER TABLE `nurses_tasks`
   ADD PRIMARY KEY (`start_time`,`end_time`);
 
 --
+-- Indexes for table `patients`
+--
+ALTER TABLE `patients`
+  ADD PRIMARY KEY (`Patient_Id`);
+
+--
 -- Indexes for table `user_table`
 --
 ALTER TABLE `user_table`
@@ -249,7 +282,13 @@ ALTER TABLE `user_table`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `emplyee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `emplyee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT for table `patients`
+--
+ALTER TABLE `patients`
+  MODIFY `Patient_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1035;
 
 --
 -- AUTO_INCREMENT for table `user_table`

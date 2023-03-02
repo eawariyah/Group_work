@@ -6,6 +6,23 @@ html, body {
 *{
   box-sizing: border-box;
 }
+
+.searchBar1 {
+  position: absolute;
+  top: 2%;
+  left: 21%;
+  width: 38.5%;
+  height: 30px;
+  opacity: 80%;
+  background-color: white;
+  border-radius: 0.5em;
+  border: none;
+  padding-left: 1em;
+  border: 0.5px solid #d5e9f3;
+  border-radius: 7px;
+  box-shadow: 0 3px 5px 0 rgb(95 95 97 / 30%);
+}
+
 #nurseTable{
   position: absolute;
   bottom: 68%;
@@ -14,6 +31,17 @@ html, body {
   height: 20%;
   font-size: 0.8em;
   font-weight: 600;
+}
+
+#doctorTable{
+  position: absolute;
+  bottom: 66%;
+  left: 21.5%;
+  width: 78%;
+  height: 20%;
+  font-size: 0.8em;
+  font-weight: 600;
+  overflow-y: scroll;
 }
 
 .content {
@@ -189,4 +217,65 @@ main{
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
   
+}
+
+/* CSS */
+.update_button, .delete_button {
+  background: #fff;
+  backface-visibility: hidden;
+  border-radius: .375rem;
+  border-style: solid;
+  border-width: .125rem;
+  box-sizing: border-box;
+  color: #212121;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,Helvetica,sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 1.3;
+  padding: .875rem 1.125rem;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transform: translateZ(0) scale(1);
+  transition: transform .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.update_button:not(:disabled):hover {
+  transform: scale(1.05);
+}
+
+.update_button:not(:disabled):hover:active {
+  transform: scale(1.05) translateY(.125rem);
+}
+
+.update_button:focus {
+  outline: 0 solid transparent;
+}
+
+.update_button:focus:before {
+  content: "";
+  left: calc(-1*.375rem);
+  pointer-events: none;
+  position: absolute;
+  top: calc(-1*.375rem);
+  transition: border-radius;
+  user-select: none;
+}
+
+.update_button:focus:not(:focus-visible) {
+  outline: 0 solid transparent;
+}
+
+.update_button:focus:not(:focus-visible):before {
+  border-width: 0;
+}
+
+.update_button:not(:disabled):active {
+  transform: translateY(.125rem);
 }

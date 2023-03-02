@@ -1,3 +1,20 @@
+<?php
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "clinic_db";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Retrieve data from the database table
+$sql = "SELECT * FROM employee where emp_role='d'";
+$result = $conn->query($sql);
+$qry = "SELECT * FROM employee where emp_role='n'"; 
+$res = $conn->query($qry);
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -6,6 +23,7 @@
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
   <link href="personsList.css" rel="stylesheet" type="text/css" />
+  <link href="doctorsNursesHome.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -18,20 +36,71 @@
     </div>
   </div>
 
-  <input type='text' name='search' placeholder="search" class='searchBar'>
+  <input type='text' name='search' placeholder="search" class='searchBar1'>
   <main>
-    <div class='navBar'>
-      <img>
-      <a class='button'>Home</a>
-      <a class='button' href='calendar.html'>Calendar</a>
-      <a class='button' href='patientsList.html'>Patients</a>
-      <a class='button' href='nursesList.html'>Nurses</a>
-      <a class='button' href='createTask.html'>Create Task</a>
-      <a class='button' href='patient.html'>A patient</a>
-      <a class='button'>SignOut</a>
-    </div>
+  <div class='navBar'>
+         <div class="image_placeholder">
+            <img src="">
+         </div>
+         <div class="name_placeholder">
+            <b id="Fname">Fname lname</b>
+         </div>
+         <b id="emailVal">Fname.lname@abc.com</b>
+         <img>
+         <a class='button' id = "doctorsHomepg" href='doctorsHome.php'>Home</a>
+         <a class='button' id="calendarpg" href='calendar.php'>Calendar</a>
+         <a class='button' id="patientsListpg" href='patientsList.php'>Patients</a>
+         <a class='button' id="nursesListpg" href='nursesList.php'>Nurses</a>
+         <a class='button' id="createTaskpg" href='createTask.php'>Create Task</a>
+         <a class='button' id="patientpg" href='patient.php'>A patient</a>
+         <a class='button' href='logout.php' id='signOut'>SignOut</a>
+      </div>
 
-    <div class='personGrid'>
+      <h2>Doctors</h2>
+               <table id = 'doctorTable'>
+                  <tr>
+                     <th>ID</th>
+                     <th>Firstname</th>
+                     <th>Lastname</th>
+                     <th>Email</th>
+                     <th>Phone Number</th>
+                     <th>Gender</th>
+                     <th>Specialization</th>
+                     <th>Events</th>
+                  </tr>
+                  <?php
+                     if ($result->num_rows > 0) {
+                       while($row = $result->fetch_assoc()) {
+                         echo "<tr>
+                                <td>".$row["emplyee_id"]."</td>
+                                <td>". $row["FirstName"]. "</td>
+                                <td>".$row["LastName"]."</td>
+                                <td>".$row["Email"]."</td>
+                                <td>".$row["PhoneNumber"]."</td>
+                                <td>".$row["Gender"]."</td>
+                                <td>".$row["Specialization"]."</td>
+                                <td><button class='update_button' role='button'><a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a></button>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<button class='delete_button' role='button'><a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a></td>
+                                </td>
+                                </tr>";
+
+                                // <td><button><a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a></button>
+
+
+
+                               //  <td><a href='Update.php?doctor_id=".$row["Doctor_Id"]."'>delete</a></td>
+                               //  <td><a href='Update.php?doctor_id=".$row["update"]."'>update</a></td>
+                       }
+                       
+                     } else {
+                       echo "<tr>
+                             <td colspan='3'>No data found</td>
+                             </tr>";
+                     }
+                     ?>
+               </table>
+
+    <!-- <div class='personGrid'>
       <div class='person'>
         <img src="img.jpg" alt="John" style="width:100%">
         <h1>Jilly Doe</h1>
@@ -74,9 +143,9 @@
         <p><button>ViewSchedule</button></p>
       </div>
     </div>
-  </main>
+  </main> -->
 
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script>
   <script>
     function closeAllSelect(elmnt) {
       /* A function that will close all select boxes in the document,
@@ -91,6 +160,6 @@
     } /* If the user clicks
     anywhere outside the select box, then close all select boxes: */ document.addEventListener("click", closeAllSelect);
     function myFunction() {document.getElementById("myDropdown").classList.toggle("show");}
-  </script>
+  </script> -->
 
 </body>

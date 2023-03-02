@@ -31,6 +31,26 @@
       box-shadow: 0 3px 5px 0 rgb(95 95 97 / 30%);
     }
 
+    .statusTitle{
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      font-family: "Inter";
+    }
+
+    .doctorTitle{
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      font-family: "Inter";
+    }
+
+    .nurseTitle{
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      font-family: "Inter";
+    }
 
     .patients {
     position: display;

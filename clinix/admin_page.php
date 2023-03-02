@@ -56,7 +56,6 @@ $res = $conn->query($qry);
             </div>
 
             <!-- <div class = "left"> -->
-               <h2>Doctors</h2>
                <table id = 'doctorTable'>
                   <tr>
                      <th>ID</th>
@@ -79,8 +78,7 @@ $res = $conn->query($qry);
                                 <td>".$row["Gender"]."</td>
                                 <td>".$row["Specialization"]."</td>
                                 
-                                <td><button><a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a></button></td>
-                                <td><button><a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a></button>
+                                
                                 </td>
                                 </tr>";
                                //  <td><a href='Update.php?doctor_id=".$row["Doctor_Id"]."'>delete</a></td>
@@ -93,6 +91,8 @@ $res = $conn->query($qry);
                              </tr>";
                      }
                      ?>
+                     <!-- <td><button><a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a></button></td>
+                                <td><button><a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a></button> -->
                </table>
                   
                <h2>Nurse Data</h2>
@@ -115,9 +115,7 @@ $res = $conn->query($qry);
                              <td>".$row["Email"]."</td>
                              <td>".$row["PhoneNumber"]."</td>
                              <td>".$row["Gender"]."</td>
-                             <td><button><a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a></button></td>
-                                  <td><button><a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a></button>
-                                  </td>
+             
                            
                            </tr>";
                                   
@@ -130,6 +128,11 @@ $res = $conn->query($qry);
                        }
                      ?>
                </table>
+<!-- 
+               <td><button><a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a></button></td>
+                                  <td><button><a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a></button>
+                                  </td> -->
+
                <!-- <form method="post" action="add_nurse.php">
                   <input type="text" name="Fname" placeholder="Enter First name">
                   <input type="text" name="Lname" placeholder="Enter Last name">

@@ -18,7 +18,6 @@ $res = $conn->query($qry);
 <!DOCTYPE html>
 
 <html>
-
    <head>
       <title>Admin</title>
       <link rel="stylesheet" href="admin.css">
@@ -42,6 +41,10 @@ $res = $conn->query($qry);
          <a class='button' href='logout.php' id='signOut'>SignOut</a>
       </div>
 
+      <p class="statusTitle">Status</p>
+      <p class="doctorTitle">Doctor</p>
+      <p class="nurseTitle">Nurses</p>
+
             <div class='numberPatients' id='numberPatients'>
                <i class='fa fa-warning' style="font-size:24px;"></i>
                <h2>Number of Nurses</h2>
@@ -50,11 +53,10 @@ $res = $conn->query($qry);
 
             <div class='numberDoctors' id='numberDoctors'>
                <i class='fa fa-warning' style="font-size:24px;"></i>
-               <h2>Number of doctors</h2>
+               <h2>Number of Doctors</h2>
                <!-- <p>Here is some information.</p> -->
             </div>
 
-            <div class="doctorTablescontainer">
                <table id = 'doctorTable'>
                   <tr>
                      <th>ID</th>
@@ -93,9 +95,7 @@ $res = $conn->query($qry);
                      <!-- <td><button><a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a></button></td>
                                 <td><button><a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a></button> -->
                </table>
-               </div>
                   
-               <h2>Nurse Data</h2>
                <table id="nurseTable">
                   <tr>
                      <th>FirstName</th>

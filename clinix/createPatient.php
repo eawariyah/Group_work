@@ -13,18 +13,20 @@
 
     <div id="popupform">
         <form class="container" action="add_employee.php" method="POST">
+            
             <label for="f_name">First Name</label><br>
             <input type="text" name="f_name" class="f_name" id="f_name"><br>
     
             <label for="l_name">Last Name</label><br>
             <input type="text" name="l_name" class="l_name" id="l_name"><br>
-    
-            <label for="patientEmail">Email Address</label><br>
-            <input type="text" name="patientEmail" class="employeeEmail" id="patientEmail"><br>
 
-            <label for="employeeNumber">Phone Number</label><br>
-            <input type="tel" name="patientNumber" class="employeeNumber" id="patientNumber"><br>
-    
+             <label for="genderSelect">Gender</label><br>
+            <select id="genderSelect" class="genderSelect" name="gender"><br>
+                <option value="male">Gender</option>
+                <option value="male">male</option>
+                <option value="female">female</option>
+              </select><br>
+
             <label for="DOB">DOB</label><br>
             <input type="text" name="DOB" class="defaultPassword" id="DOB"><br>
 
@@ -32,7 +34,10 @@
             <input type="text" name="height" class="defaultPassword" id="height"><br>
 
             <label for="Weight">Weight</label><br>
-            <input type="text" name="weight" class="defaultPassword" id="Weight"><br>
+            <input type="text" name="weight" class="defaultPassword" id="weight"><br>
+
+            <label for="Ethnicity">Ethnicity</label><br>
+            <input type="text" name="ethnicity" class="defaultPassword" id="ethnicity"><br>
 
             <label for="bloodgroup">BloodGroup</label><br>
             <input type="text" name="bloodgroup" class="defaultPassword" id="bloodgroup"><br>
@@ -40,16 +45,13 @@
             <label for="history">Medical History</label><br>
             <input type="text" name="history" class="defaultPassword" id="history"><br>
 
-            <label for="genderSelect">Gender</label><br>
-            <select id="genderSelect" class="genderSelect" name="gender"><br>
-                <option value="male">Gender</option>
-                <option value="male">male</option>
-                <option value="female">female</option>
-              </select><br>
-    
             
+            <label for="patientEmail">Email Address</label><br>
+            <input type="text" name="patientEmail" class="employeeEmail" id="patientEmail"><br>
 
-           
+            <label for="employeeNumber">Phone Number</label><br>
+            <input type="tel" name="patientNumber" class="employeeNumber" id="patientNumber"><br>
+            
 
             <input type="Submit" class = "Submit" value="Submit" name="Submit">
             

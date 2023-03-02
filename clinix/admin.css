@@ -1,64 +1,48 @@
- /* Sidebar */
-
-    /* .sidebar {
-      height: 100%;
-      width: 200px;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: #f1f1f1;
-      overflow-x: hidden;
-      padding-top: 20px;
-    }
-
-    .sidebar a {
-      display: block;
-      color: black;
-      padding: 16px;
-      text-decoration: none;
-    }
-
-    .sidebar a:hover {
-      background-color: #ddd;
-    }
-
-    .sidebar button {
-      background-color: #03989E;
-      color: white;
-      padding: 16px;
+    #numberPatients{
+      position: absolute;
+      right: 30.0%;
+      bottom: 70%;
+      background-color: white;
+      width: 20%;
+      border-radius: 5px;
       border: none;
-      text-decoration: none;
-      display: block;
-      margin: 10px;
-      cursor: pointer;
-      width: 100%;
-      text-align: left;
-    } */
+      height: 20%;
+      /* border: 0.5px solid #0000009f; */
+      border-radius: 7px;
+      border: 0.5px solid #d5e9f3;
+      box-shadow: 0 3px 5px 0 rgb(95 95 97 / 30%);
+    }
+    #searchBar {
+      position: absolute;
+      top: 2%;
+      left: 21%;
+      width: 38.5%;
+      height: 30px;
+      opacity: 80%;
+      background-color: white;
+      border-radius: 0.5em;
+      border: none;
+      padding-left: 1em;
+      border: 0.5px solid #d5e9f3;
+      border-radius: 7px;
+      box-shadow: 0 3px 5px 0 rgb(95 95 97 / 30%);
+    }
 
-      
-        /* img{
-      width:100px;
-      border-radius:50%;
-      position : center; 
-      overflow:hidden;
-      border:4px solid @color-1st;
-      box-shadow:0 0 0 4px rgba(255,255,255,0.2);} */
+    #numberDoctors{
+      position: absolute;
+      right: 58.5%;
+      bottom: 70%;
+      background-color: white;
+      width: 20%;
+      border-radius: 5px;
+      border: none;
+      height: 20%;
+      /* border: 0.5px solid #0000009f; */
+      border-radius: 7px;
+      border: 0.5px solid #d5e9f3;
+      box-shadow: 0 3px 5px 0 rgb(95 95 97 / 30%);
+    }
 
-
-      #numberPatients{
-        position: absolute;
-        right: 62.5%;
-        bottom: 70%;
-        background-color: white;
-        width: 15%;
-        border-radius: 5px;
-        border: none;
-        height: 20%;
-        /* border: 0.5px solid #0000009f; */
-        border-radius: 7px;
-        border: 0.5px solid #d5e9f3;
-        box-shadow: 0 3px 5px 0 rgb(95 95 97 / 30%);}
 
     .patients {
     position: display;
@@ -77,12 +61,13 @@
 
     #doctorTable{
       position: absolute;
-      bottom: 10%;
-      left: 20%;
+      bottom: 35%;
+      left: 21.5%;
       width: 20%;
       height: 20%;
       font-size: 0.8em;
       font-weight: 600;
+      overflow-y: scroll;
     }
 
     #nurseTable{

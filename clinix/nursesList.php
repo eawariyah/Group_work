@@ -1,3 +1,20 @@
+<?php
+   // Database connection
+   $servername = "localhost";
+   $username = "root";
+   $password = "";
+   $dbname = "clinic_db";
+   
+   $conn = new mysqli($servername, $username, $password, $dbname);
+   
+   // Retrieve data from the database table
+   $sql = "SELECT * FROM employee where emp_role='d'";
+   $result = $conn->query($sql);
+   $qry = "SELECT * FROM employee where emp_role='n'"; 
+   $res = $conn->query($qry);
+   
+   ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -43,48 +60,42 @@
          <a class='button' href='logout.php' id='signOut'>SignOut</a>
       </div>
 
-    <!-- <div class='personGrid'>
-      <div class='person'>
-        <img src="img.jpg" alt="John" style="width:100%">
-        <h1>Jilly Doe</h1>
-        <p class="title">CEO & Founder, Example</p>
-        <p>Harvard University</p>
-        <p><button>ViewSchedule</button></p>
-      </div>
 
+      <table id="nurseTable">
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>PhoneNumber</th>
+            <th>Gender</th>
+        </tr>
+        <?php
+            // code to retrieve data from "nursery" table
+            if ($res->num_rows > 0) {
+                while($row = $res->fetch_assoc()) {
+                  echo "<tr>
+                    <td>".$row["emplyee_id"]."</td>   
+                    <td>". $row["FirstName"]. "</td>
+                    <td>".$row["LastName"]."</td>
+                    <td>".$row["Email"]."</td>
+                    <td>".$row["PhoneNumber"]."</td>
+                    <td>".$row["Gender"]."</td>
+                    <td><button><a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a></button></td>
+                        <td><button><a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a></button>
+                        </td>
+                  
+                  </tr>";
+                        
+                        
+                }
+              } else {
+                echo "<tr>
+                      <td colspan='3'>No data found</td>
+                      </tr>";
+              }
+            ?>
+      </table>
 
-      <div class='person'>
-        <img src="img.jpg" alt="John" style="width:100%">
-        <h1>John Doe</h1>
-        <p class="title">CEO & Founder, Example</p>
-        <p>James University</p>
-        <p><button>ViewSchedule</button></p>
-      </div>
-
-      <div class='person'>
-        <img src="img.jpg" alt="John" style="width:100%">
-        <h1>Jane Doe</h1>
-        <p class="title">CEO & Founder, Example</p>
-        <p>James University</p>
-        <p><button>ViewSchedule</button></p>
-      </div>
-
-
-      <div class='person'>
-        <img src="img.jpg" alt="John" style="width:100%">
-        <h1>Jack Doe</h1>
-        <p class="title">CEO & Founder, Example</p>
-        <p>James Uni</p>
-        <p><button>ViewSchedule</button></p>
-      </div>
-
-      <div class='person'>
-        <img src="img.jpg" alt="John" style="width:100%">
-        <h1>Jack Doe</h1>
-        <p class="title">CEO & Founder, Example</p>
-        <p>James University</p>
-        <p><button>ViewSchedule</button></p>
-      </div> -->
     </div>
   </main>
 

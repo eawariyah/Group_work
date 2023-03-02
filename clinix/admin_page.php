@@ -1,19 +1,19 @@
 <?php
-   // Database connection
-   $servername = "localhost";
-   $username = "root";
-   $password = "";
-   $dbname = "clinic_db";
-   
-   $conn = new mysqli($servername, $username, $password, $dbname);
-   
-   // Retrieve data from the database table
-   $sql = "SELECT * FROM employee where emp_role='d'";
-   $result = $conn->query($sql);
-   $qry = "SELECT * FROM employee where emp_role='n'"; 
-   $res = $conn->query($qry);
-   
-   ?>
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "clinic_db";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Retrieve data from the database table
+$sql = "SELECT * FROM employee where emp_role='d'";
+$result = $conn->query($sql);
+$qry = "SELECT * FROM employee where emp_role='n'"; 
+$res = $conn->query($qry);
+
+?>
 
 <!DOCTYPE html>
 
@@ -26,7 +26,7 @@
    </head>
 
    <body>
-      <input type='text' name='search' placeholder="search" class='searchBar'>
+      <input type='text' name='search' id="searchBar" placeholder="search" class='searchBar'>
       <main>
       <div class='navBar'>
          <div class="image_placeholder">
@@ -48,11 +48,17 @@
 
             <div class='numberPatients' id='numberPatients'>
                <i class='fa fa-warning' style="font-size:24px;"></i>
-               <h2>Information Block 2</h2>
+               <h2>Number of Nurses</h2>
                <!-- <p>Here is some information.</p> -->
             </div>
 
-            <div class = "left">
+            <div class='numberDoctors' id='numberDoctors'>
+               <i class='fa fa-warning' style="font-size:24px;"></i>
+               <h2>Number of doctors</h2>
+               <!-- <p>Here is some information.</p> -->
+            </div>
+
+            <!-- <div class = "left"> -->
                <h2>Doctors</h2>
                <table id = 'doctorTable'>
                   <tr>
@@ -91,14 +97,6 @@
                      }
                      ?>
                </table>
-
-               <!-- <form method="post" action="add_doctor.php">
-                  <input type="text" name="Doctor_Id" placeholder="Enter ID">
-                  <input type="text" name="Firstname" placeholder="Enter First name">
-                  <input type="text" name="Lastname" placeholder="Enter Last name">
-                  <input type="number" name="Room_office" placeholder="Enter room number">
-                  <input type="submit" name="submit" value="Add Data">
-                  </form> -->
                   
                <h2>Nurse Data</h2>
                <table id="nurseTable">

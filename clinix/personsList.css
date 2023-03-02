@@ -6,7 +6,6 @@ html, body {
 *{
   box-sizing: border-box;
 }
-<<<<<<< HEAD
 #addnurse{
   background: #03989E;
   backface-visibility: hidden;
@@ -49,8 +48,6 @@ html, body {
   border-radius: 7px;
   box-shadow: 0 3px 5px 0 rgb(95 95 97 / 30%);
 }
-=======
->>>>>>> 5bc6b4248c15bc39657cce2635cd9cc22206c012
 
 #nurseTable{
   position: absolute;

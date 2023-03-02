@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['Submit'])) 
 {
-
+    
 //check if the form has been submitted 
 
     //Get the user_ID and password from the form 
@@ -31,19 +31,19 @@ if (isset($_POST['Submit']))
 
    //insert the data into the doctor table
 
-    $sql = "INSERT INTO employee(FirstName, LastName, Email, emp_pass, PhoneNumber, Gender, emp_role, Specialization) 
-    VALUES( '$firstname', '$lastname', '$employee_email', '$encrypted_pass', '$employee_number', '$gender', '$employee_role', '$speciality')"; 
+    $sql = "INSERT INTO employee(FirstName,LastName,Email,emp_pass,PhoneNumber,Gender,emp_role,Specialization) 
+    VALUES ('$firstname','$lastname','$employee_email','$encrypted_pass','$employee_number','$gender','$employee_role','$speciality')"; 
     
-    
-    
-        if($conn->query($sql)===TRUE){
+    if($conn->query($sql) === TRUE){
+
             header("Location : admin_page.php");
             exit();
         }
-        else {echo "Error: " . $sql . "<br>" . $conn->error;
-         
+    
+    else {echo "Error: " . $sql . "<br>" . $conn->error;
     }
     $conn->close();
+
 }
 else{
     echo"error"; 

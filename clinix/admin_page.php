@@ -39,7 +39,7 @@ $res = $conn->query($qry);
          <img>
          <a class='button' id = "doctorsHomepg" href='doctorsHome.php'>Home</a>
          <!-- <a class='button' id="calendarpg" href='calendar.php'>Calendar</a> -->
-         <a class='button' id="doctorsListpg" href='doctorsList.php'>Patients</a>
+         <a class='button' id="doctorsListpg1" href='doctorsList.php'>Patients</a>
          <a class='button' id="nursesListpg" href='nursesList.php'>Nurses</a>
          <!-- <a class='button' id="createTaskpg" href='createTask.php'>Create Task</a> -->
          <!-- <a class='button' id="patientpg" href='patient.php'>A patient</a> -->

@@ -136,6 +136,11 @@ html, body{
   bottom: 50%;
   left: 5%;
 }
+#doctorsListpg1{
+  position: absolute;
+  bottom: 40.5%;
+  left: 5%;
+}
 #patientsListpg{
   position: absolute;
   bottom: 40.5%;

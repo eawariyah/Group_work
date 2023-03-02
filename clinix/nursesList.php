@@ -81,6 +81,11 @@
                     <td>".$row["Email"]."</td>
                     <td>".$row["PhoneNumber"]."</td>
                     <td>".$row["Gender"]."</td>
+<<<<<<< HEAD
+                   
+                        </td>
+                  
+=======
                     
 
 
@@ -97,6 +102,7 @@
                     <a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a>
 
                   </td>                  
+>>>>>>> 5bc6b4248c15bc39657cce2635cd9cc22206c012
                   </tr>";
                     
                   
@@ -110,6 +116,8 @@
                       <td colspan='3'>No data found</td>
                       </tr>";
               }
+              // <td><button><a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a></button></td>
+              //<td><button><a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a></button>
             ?>
       </table>
 

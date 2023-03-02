@@ -36,9 +36,6 @@ $res = $conn->query($qry);
     </div>
   </div>
 
-  <input type='text' name='search' placeholder="search" class='searchBar1'>
-  <button class="Search" role="button">Search</button>
-
   <main>
   <div class='navBar'>
          <div class="image_placeholder">
@@ -81,7 +78,18 @@ $res = $conn->query($qry);
                                 <td>".$row["PhoneNumber"]."</td>
                                 <td>".$row["Gender"]."</td>
                                 <td>".$row["Specialization"]."</td>
-                                <td><button class='update_button' role='button'><a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a></button>&nbsp;&nbsp;&nbsp;&nbsp;<button class='update_button' role='button'>View</button>&nbsp;&nbsp;&nbsp;&nbsp;<button class='update_button' role='button'><a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a></td>
+                                <td>
+                                    <button class='update_button' role='button'>
+                                      <a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a>
+                                    </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button class='update_button' role='button'>
+                                    View
+                                    </button>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                    <button class='update_button' role='button'>
+                                      <a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a>
+
+                                </td>
                                 </td>
                                 </tr>";
 

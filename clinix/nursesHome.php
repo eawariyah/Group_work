@@ -11,7 +11,6 @@
 </head>
 
 <body>
-  <input type='text' name='search' placeholder="search" class='searchBar'>
   <main>
     <div class='navBar'>
       <div class="image_placeholder">

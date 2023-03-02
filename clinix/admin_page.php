@@ -26,7 +26,6 @@ $res = $conn->query($qry);
    </head>
 
    <body>
-      <input type='text' name='search' id="searchBar" placeholder="search" class='searchBar'>
       <main>
       <div class='navBar'>
          <div class="image_placeholder">

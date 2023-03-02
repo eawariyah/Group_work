@@ -22,7 +22,7 @@
       </div>
       <b id="emailVal">Fname.lname@abc.com</b>
       <img>
-      <a class='button' id = "doctorsHomepg"; href='doctorsHome.php'>Home</a>
+      <a class='button' id = "doctorsHomepg"; href='nursesHome.php'>Home</a>
       <a class='button' id = "calendarpg"; href='calendar.php'>Calendar</a>
       <a class='button' id = "patientsListpg"; href='patientsList.php'>Patients</a>
       <a class='button' id = "nursesListpg"; href='nursesList.php'>View Doctors</a>

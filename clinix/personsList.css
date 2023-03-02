@@ -6,7 +6,6 @@ html, body {
 *{
   box-sizing: border-box;
 }
-<<<<<<< HEAD
 #addnurse{
   background: #03989E;
   backface-visibility: hidden;
@@ -34,23 +33,6 @@ html, body {
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-.searchBar1 {
-  position: absolute;
-  top: 2%;
-  left: 21%;
-  width: 38.5%;
-  height: 30px;
-  opacity: 80%;
-  background-color: white;
-  border-radius: 0.5em;
-  border: none;
-  padding-left: 1em;
-  border: 0.5px solid #d5e9f3;
-  border-radius: 7px;
-  box-shadow: 0 3px 5px 0 rgb(95 95 97 / 30%);
-}
-=======
->>>>>>> 5bc6b4248c15bc39657cce2635cd9cc22206c012
 
 #nurseTable{
   position: absolute;

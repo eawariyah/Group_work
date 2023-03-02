@@ -26,7 +26,6 @@ $res = $conn->query($qry);
    </head>
 
    <body>
-      <input type='text' name='search' id="searchBar" placeholder="search" class='searchBar'>
       <main>
       <div class='navBar'>
          <div class="image_placeholder">
@@ -37,12 +36,9 @@ $res = $conn->query($qry);
          </div>
          <b id="emailVal">Fname.lname@abc.com</b>
          <img>
-         <a class='button' id = "doctorsHomepg" href='doctorsHome.php'>Home</a>
-         <!-- <a class='button' id="calendarpg" href='calendar.php'>Calendar</a> -->
-         <a class='button' id="doctorsListpg" href='doctorsList.php'>Patients</a>
+         <a class='button' id = "doctorsHomepg" href='admin_page.php'>Home</a>
+         <a class='button' id="doctorsListpg1" href='doctorsList.php'>Doctors</a>
          <a class='button' id="nursesListpg" href='nursesList.php'>Nurses</a>
-         <!-- <a class='button' id="createTaskpg" href='createTask.php'>Create Task</a> -->
-         <!-- <a class='button' id="patientpg" href='patient.php'>A patient</a> -->
          <a class='button' href='logout.php' id='signOut'>SignOut</a>
       </div>
 
@@ -58,8 +54,7 @@ $res = $conn->query($qry);
                <!-- <p>Here is some information.</p> -->
             </div>
 
-            <!-- <div class = "left"> -->
-               <h2>Doctors</h2>
+            <div class="doctorTablescontainer">
                <table id = 'doctorTable'>
                   <tr>
                      <th>ID</th>
@@ -82,8 +77,7 @@ $res = $conn->query($qry);
                                 <td>".$row["Gender"]."</td>
                                 <td>".$row["Specialization"]."</td>
                                 
-                                <td><button><a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a></button></td>
-                                <td><button><a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a></button>
+                                
                                 </td>
                                 </tr>";
                                //  <td><a href='Update.php?doctor_id=".$row["Doctor_Id"]."'>delete</a></td>
@@ -96,7 +90,10 @@ $res = $conn->query($qry);
                              </tr>";
                      }
                      ?>
+                     <!-- <td><button><a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a></button></td>
+                                <td><button><a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a></button> -->
                </table>
+               </div>
                   
                <h2>Nurse Data</h2>
                <table id="nurseTable">
@@ -118,9 +115,7 @@ $res = $conn->query($qry);
                              <td>".$row["Email"]."</td>
                              <td>".$row["PhoneNumber"]."</td>
                              <td>".$row["Gender"]."</td>
-                             <td><button><a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a></button></td>
-                                  <td><button><a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a></button>
-                                  </td>
+             
                            
                            </tr>";
                                   
@@ -133,6 +128,11 @@ $res = $conn->query($qry);
                        }
                      ?>
                </table>
+<!-- 
+               <td><button><a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a></button></td>
+                                  <td><button><a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a></button>
+                                  </td> -->
+
                <!-- <form method="post" action="add_nurse.php">
                   <input type="text" name="Fname" placeholder="Enter First name">
                   <input type="text" name="Lname" placeholder="Enter Last name">

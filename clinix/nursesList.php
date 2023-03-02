@@ -40,7 +40,6 @@
     </div>
   </div>
 
-  <!-- <input type='text' name='search' placeholder="search" class='searchBar'> -->
   <main>
     <div class='navBar'>
       <div class="image_placeholder">
@@ -63,11 +62,13 @@
 
       <table id="nurseTable">
         <tr>
+            <th>ID</th>
             <th>FirstName</th>
             <th>LastName</th>
             <th>Email</th>
             <th>PhoneNumber</th>
             <th>Gender</th>
+            <th>Events</th>
         </tr>
         <?php
             // code to retrieve data from "nursery" table
@@ -80,11 +81,34 @@
                     <td>".$row["Email"]."</td>
                     <td>".$row["PhoneNumber"]."</td>
                     <td>".$row["Gender"]."</td>
+<<<<<<< HEAD
                    
                         </td>
                   
+=======
+                    
+
+
+                    <td>
+                    <button class='update_button' role='button'>
+                    <a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a>
+                    </button>&nbsp;&nbsp;&nbsp;&nbsp;
+  
+                    <button class='update_button' role='button'>
+                    View
+                    </button>&nbsp;&nbsp;&nbsp;&nbsp;
+  
+                    <button class='update_button' role='button'>
+                    <a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a>
+
+                  </td>                  
+>>>>>>> 5bc6b4248c15bc39657cce2635cd9cc22206c012
                   </tr>";
-                        
+                    
+                  
+
+
+
                         
                 }
               } else {
@@ -100,7 +124,7 @@
     </div>
   </main>
 
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script>
   <script>
     function closeAllSelect(elmnt) {
       /* A function that will close all select boxes in the document,
@@ -115,6 +139,6 @@
     } /* If the user clicks
     anywhere outside the select box, then close all select boxes: */ document.addEventListener("click", closeAllSelect);
     function myFunction() {document.getElementById("myDropdown").classList.toggle("show");}
-  </script>
+  </script> -->
 
 </body>

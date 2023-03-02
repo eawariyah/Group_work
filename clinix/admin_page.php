@@ -37,12 +37,9 @@ $res = $conn->query($qry);
          </div>
          <b id="emailVal">Fname.lname@abc.com</b>
          <img>
-         <a class='button' id = "doctorsHomepg" href='doctorsHome.php'>Home</a>
-         <!-- <a class='button' id="calendarpg" href='calendar.php'>Calendar</a> -->
-         <a class='button' id="doctorsListpg1" href='doctorsList.php'>Patients</a>
+         <a class='button' id = "doctorsHomepg" href='admin_page.php'>Home</a>
+         <a class='button' id="doctorsListpg1" href='doctorsList.php'>Doctors</a>
          <a class='button' id="nursesListpg" href='nursesList.php'>Nurses</a>
-         <!-- <a class='button' id="createTaskpg" href='createTask.php'>Create Task</a> -->
-         <!-- <a class='button' id="patientpg" href='patient.php'>A patient</a> -->
          <a class='button' href='logout.php' id='signOut'>SignOut</a>
       </div>
 

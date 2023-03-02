@@ -55,7 +55,7 @@ $res = $conn->query($qry);
                <!-- <p>Here is some information.</p> -->
             </div>
 
-            <!-- <div class = "left"> -->
+            <div class="doctorTablescontainer">
                <table id = 'doctorTable'>
                   <tr>
                      <th>ID</th>
@@ -94,6 +94,7 @@ $res = $conn->query($qry);
                      <!-- <td><button><a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a></button></td>
                                 <td><button><a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a></button> -->
                </table>
+               </div>
                   
                <h2>Nurse Data</h2>
                <table id="nurseTable">

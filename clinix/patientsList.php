@@ -1,3 +1,18 @@
+<?php
+   // Database connection
+   $servername = "localhost";
+   $username = "root";
+   $password = "";
+   $dbname = "clinic_db";
+   
+   $conn = new mysqli($servername, $username, $password, $dbname);
+   
+   // Retrieve data from the database table
+   $sql = "SELECT * FROM patients";
+   $result = $conn->query($sql);
+   
+   
+   ?>
 <!DOCTYPE html>
 <html>
 
@@ -41,7 +56,57 @@
       <a href='patient.php'>A patient</a>
       </div>
     </div>
-
+    
+    <div class = "left">
+               <h2>Patients</h2>
+               <table id = 'doctorTable'>
+                  <tr>
+                     <th>ID</th>
+                     <th>Firstname</th>
+                     <th>Lastname</th>
+                     <th>Gender</th>
+                     <th>DOB</th>
+                     <th>Height</th>
+                     <th>Weight</th>
+                     <th>Ethnicity</th>
+                     <th>Blood Group</th>
+                     <th>Medical History</th>
+                     <th>Email</th>
+                     <th>Phone Number</th>
+                  </tr>
+                   <?php
+                     if ($result->num_rows > 0) {
+                       while($row = $result->fetch_assoc()) {
+                         echo "<tr>
+                                <td>".$row["Patient_id"]."</td>
+                                <td>". $row["Firstname"]. "</td>
+                                <td>".$row["Lastname"]."</td>
+                                <td>".$row["Gender"]."</td>
+                                <td>".$row["DOB"]."</td>
+                                <td>".$row["Height"]."</td>
+                                <td>".$row["Weight"]."</td>
+                                <td>".$row["Ethnicity"]."</td>
+                                <td>".$row["BloodGroup"]."</td>
+                                <td>".$row["MedicalHistory"]."</td>
+                                <td>".$row["Email"]."</td>
+                                <td>".$row["PhoneNumber"]."</td>
+                                
+                                <td><button><a href='update.php?updateid=".$row["Patient_id"]."'>Update</a></button></td>
+                                <td><button><a href='delete.php?deleteid=".$row["Patient_id"]."'>Delete</a></button>
+                                </td>
+                                </tr>";
+                               //  <td><a href='Update.php?doctor_id=".$row["Doctor_Id"]."'>delete</a></td>
+                               //  <td><a href='Update.php?doctor_id=".$row["update"]."'>update</a></td>
+                       }
+                       
+                     } else {
+                       echo "<tr>
+                             <td colspan='3'>No data found</td>
+                             </tr>";
+                     }
+                     ?> 
+               </table>
+                    </div>
     <!-- <div class='personGrid'>
       <div class='person'>
         <img src="img.jpg" alt="John" style="width:100%">

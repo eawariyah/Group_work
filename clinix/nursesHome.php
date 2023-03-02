@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -68,8 +69,10 @@
       </div>
       
       <div class='innerTools'>
+      
         <div class='canvas' id='canvas' , name='canvas'>
-          "Canvas Info here"
+        
+                    </div>
         </div>
         <div class="clock">
           <div class="hour"></div>

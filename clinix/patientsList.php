@@ -68,14 +68,9 @@
                      <th>Firstname</th>
                      <th>Lastname</th>
                      <th>Gender</th>
-                     <th>DOB</th>
-                     <th>Height</th>
-                     <th>Weight</th>
-                     <th>Ethnicity</th>
-                     <th>Blood Group</th>
-                     <th>Medical History</th>
                      <th>Email</th>
                      <th>Phone Number</th>
+                     <th> Operations</th>
                   </tr>
                    <?php
                      if ($result->num_rows > 0) {
@@ -85,20 +80,14 @@
                                 <td>". $row["Firstname"]. "</td>
                                 <td>".$row["Lastname"]."</td>
                                 <td>".$row["Gender"]."</td>
-                                <td>".$row["DOB"]."</td>
-                                <td>".$row["Height"]."</td>
-                                <td>".$row["Patient_weight"]."</td>
-                                <td>".$row["Ethnicity"]."</td>
-                                <td>".$row["BloodGroup"]."</td>
-                                <td>".$row["MedicalHistory"]."</td>
                                 <td>".$row["Email"]."</td>
                                 <td>".$row["PhoneNumber"]."</td>
-                                
+                                <td><a href='deletePatient.php?deleteid=".$row["Patient_Id"]."'>delete</a>
+                                <a href='updatePatient.php?updateid=".$row["Patient_Id"]."'>update</a></td>
                                
                                 </td>
                                 </tr>";
-                               //  <td><a href='Update.php?doctor_id=".$row["Doctor_Id"]."'>delete</a></td>
-                               //  <td><a href='Update.php?doctor_id=".$row["update"]."'>update</a></td>
+                              
                        }
                        
                      } else {

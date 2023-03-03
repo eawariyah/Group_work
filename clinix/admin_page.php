@@ -35,7 +35,7 @@ $number_of_doctor_rows = mysqli_fetch_row($results_doctors);
    session_start();
 		if ($_SESSION['uid']){
 			if ($_SESSION['user_role']=='a'){
-				echo ' welcome';
+				
          }
 		}
 		else{

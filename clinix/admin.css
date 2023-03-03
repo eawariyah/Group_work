@@ -199,4 +199,26 @@
       color: white;
       cursor: pointer;
     }
-  
+
+    /* .navBar2{
+    display: inline-block;
+    position: absolute;
+    top: 0%;
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    } */
+
+@media only screen and (max-width: 800px){
+.navBar{
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+}
+#adminHomepg1{
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+}
+
+}

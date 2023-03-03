@@ -40,15 +40,12 @@ if (isset($_GET['uid']))
   <meta name="viewport" content="width=device-width">
   <title>Patient Details</title>
   <link href="patient.css" rel="stylesheet" type="text/css" />
-  
+  <link href="doctorsNursesHome.css" rel="stylesheet" type="text/css" />
   
 </head>
 	<body>	
-		
   		<main>
-  			<div class='navBar'>
-      
-      <b id="emailVal">Fname.lname@abc.com</b>
+  	<div class='navBar'>
          <a class='button' id = "doctorsHomepg" href='doctorsHome.php'>Home</a>
          <a class='button' id="calendarpg" href='calendar.php'>Calendar</a>
          <a class='button' id="patientsListpg" href='patientsList.php'>Patients</a>
@@ -72,7 +69,7 @@ if (isset($_GET['uid']))
 
 		    <div class='patientData'>
 		    	<div class='bioData'>
-			        <div class='imageContainer'><img src='assets/patientImage.jpg'></div>
+			        
 			        <h2 class='name' id='name' name='name'> <?php echo $row['Firstname']," ", $row['Lastname']; ?></h2>
 			        <p class='DOB' id='DOB' name='DOB'>Date of Birth: <?php echo $row['DOB']; ?></p>
 			        <p class='sex' id='sex' name='sex'>Gender: <?php echo $row['Gender']; ?></p>

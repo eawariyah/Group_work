@@ -22,6 +22,7 @@
       <b id="emailVal">Fname.lname@abc.com</b>
       <img>
       <a class='button' id = "doctorsHomepg"; href='nursesHome.php'>Home</a>
+      <a class='button' id = "doctorsHomepg"; href='./../backend/frontend/dailyTasksView.php'>Schedule</a>
       <a class='button' id = "patientsListpg"; href='patientsList.php'>Patients</a>
       <a class='button' id = "createTaskpg"; href='./../backend/frontend/createAppointmentView.php'>Create Appointment</a>
       <a class='button' id = "patientpg"; href='createPatient.php'>Create a patient</a>

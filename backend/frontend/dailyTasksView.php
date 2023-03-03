@@ -22,8 +22,8 @@
     <div class='navBar2'>
       <button onclick="myFunction()" class="dropbtn">Menu</button>
       <div id="myDropdown" class="dropdown-content">
-      <a href="./../nursesHome.php">Dashboard</a>
-      <a href="./../patientsList.php">Patients</a>
+      <a href="./../../clinix/nursesHome.php">Dashboard</a>
+      <a href="./../../clinix/patientsList.php">Patients</a>
       <a href="createAppointmentView.php">Create Appointment</a>
       <a href="dailyTasksView.php">Schedule</a>
       <a href="logout.php">SignOut</a>
@@ -50,7 +50,7 @@
 </body>
 <script>
       const req = new XMLHttpRequest();
-      let d = new Date('2023-04-03');
+      let d = new Date('2023-04-01');
       let year = d.getFullYear().toString();
       let month = d.getMonth().toString();
       let date = d.getDate().toString();

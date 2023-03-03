@@ -15,7 +15,7 @@ function displayAppointments($doctorID, $date){
   }
 }
 
-$doctorID =  'D1';
+$doctorID =  '26';
 $date = $_POST['fullDate'];
 displayAppointments($doctorID, $date);
 ?>

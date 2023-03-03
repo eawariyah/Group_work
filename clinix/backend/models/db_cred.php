@@ -1,8 +1,8 @@
 <?php
 //Database credentials
 define("SERVERNAME", "localhost");
-define("HOSTNAME", "root");
-define("PASSWD", "");
+define("HOSTNAME", "ClinixCare");
+define("PASSWD", "clinix@16");
 define("DATABASE", "clinic_db");
 
 ?>

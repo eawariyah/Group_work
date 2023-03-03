@@ -25,7 +25,7 @@
          <a class='button' id = "doctorsHomepg" href='./../backend/frontend/dailyAppointmentsView.php'>Schedule</a>
          <a class='button' id="nursesListpg" href='nursesList.php'>Nurses</a>
          <a class='button' id="createTaskpg" href='./../backend/frontend/createTaskView.php'>Create Task</a>
-         <a class='button' id="patientpg" href='patient.php'>A patient</a>
+         <a class='button' id="patientpg" href='patientsList.php'>Patients</a>
          <a class='button' href='logout.php' id='signOut'>SignOut</a>
       </div>
 
@@ -37,8 +37,7 @@
          <a href='patientsList.php'>Patients</a>
          <a href='nursesList.php'>Nurses</a>
          <a href='./../backend/frontend/createTaskView.php'>Create Task</a>
-         <a href='patient.php'>A patient</a>
-         </div>
+      </div>
       </div>
       <div class='tools'>
          <div class='informationBar'>

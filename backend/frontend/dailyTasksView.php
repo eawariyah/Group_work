@@ -55,8 +55,7 @@
       let month = d.getMonth().toString();
       let date = d.getDate().toString();
       let fullDate = year+'-'+month+'-'+date;
-      alert(fullDate)
-
+    
       function handler(){
 				if(req.readyState === XMLHttpRequest.DONE){
 					if(req.status === 200){

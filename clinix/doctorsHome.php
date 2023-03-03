@@ -36,7 +36,7 @@
          <a href='./../backend/frontend/dailyAppointmentsView.php'>Schedule</a>
          <a href='patientsList.php'>Patients</a>
          <a href='nursesList.php'>Nurses</a>
-         <a href='/backend/frontend/createTaskView.php'>Create Task</a>
+         <a href='./../backend/frontend/createTaskView.php'>Create Task</a>
          <a href='patient.php'>A patient</a>
          </div>
       </div>

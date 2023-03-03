@@ -23,7 +23,7 @@
       <img>
       <a class='button' id = "doctorsHomepg"; href='nursesHome.php'>Home</a>
       <a class='button' id = "patientsListpg"; href='patientsList.php'>Patients</a>
-      <a class='button' id = "createTaskpg"; href='/backend/frontend/createAppointmentView.php'>Create Appointment</a>
+      <a class='button' id = "createTaskpg"; href='./../backend/frontend/createAppointmentView.php'>Create Appointment</a>
       <a class='button' id = "patientpg"; href='createPatient.php'>Create a patient</a>
       <a class='button' href='logout.php' id='signOut'>SignOut</a>
     </div>
@@ -33,7 +33,7 @@
       <div id="myDropdown" class="dropdown-content">
       <a href='nursesHome.php'>Home</a>
       <a href='patientsList.php'>Patients</a>
-      <a href='/backend/frontend/createAppointmentView.php'>Create Appointment</a>
+      <a href='./../backend/frontend/createAppointmentView.php'>Create Appointment</a>
       <a href='createPatient.php'>Create a patient</a>
       <a href='logout.php' id='signOut'>SignOut</a>
       </div>

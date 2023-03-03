@@ -16,7 +16,7 @@
     <div id="myDropdown" class="dropdown-content">
       <a href='nursesHome.php'>Home</a>
       <a href='patientsList.php'>Patients</a>
-      <a href='/backend/frontend/createAppointmentView.php'>Create Appointment</a>
+      <a href='./../backend/frontend/createAppointmentView.php'>Create Appointment</a>
       <a href='createPatient.php'>Create a patient</a>
       <a href='logout.php' id='signOut'>SignOut</a>
       </div>

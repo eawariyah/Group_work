@@ -1,15 +1,15 @@
 <?php
-   session_start();
-		if ($_SESSION['uid']){
-			if ($_SESSION['user_role']=='a'){
+  //  session_start();
+	// 	if ($_SESSION['uid']){
+	// 		if ($_SESSION['user_role']=='a'){
 				
-         }
-		}
-		else{
-			echo header("Location: login_page.php");
-			exit();
-		}
-      ?>
+  //        }
+	// 	}
+	// 	else{
+	// 		echo header("Location: login_page.php");
+	// 		exit();
+		// }
+    //   ?>
 <?php
 // Database connection
 $servername = "localhost";
@@ -24,7 +24,7 @@ $sql = "SELECT * FROM employee where emp_role='d'";
 $result = $conn->query($sql);
 $qry = "SELECT * FROM employee where emp_role='n'"; 
 $res = $conn->query($qry);
-$abc= "SELECT Firstname,Lastname,Email FROM employee where emplyee_id=$_SESSION[uid]";
+// $abc= "SELECT Firstname,Lastname,Email FROM employee where emplyee_id=$_SESSION[uid]";
 
 $results_nurse = mysqli_query($conn, "SELECT COUNT(*) FROM employee where emp_role='n'"); 
 $number_of_nurse_rows = mysqli_fetch_row($results_nurse); 
@@ -32,11 +32,11 @@ $number_of_nurse_rows = mysqli_fetch_row($results_nurse);
 $results_doctors = mysqli_query($conn, "SELECT COUNT(*) FROM employee where emp_role='d'"); 
 $number_of_doctor_rows = mysqli_fetch_row($results_doctors);
 
-$results = mysqli_query($conn, $abc); 
+// $results = mysqli_query($conn, $abc); 
 $row=mysqli_fetch_assoc($result);
-$first_name=$row['FirstName'];
-$last_name=$row['LastName'];
-$email=$row['Email'];
+// $first_name=$row['FirstName'];
+// $last_name=$row['LastName'];
+// $email=$row['Email'];
 ?>
 
 <!DOCTYPE html>
@@ -49,17 +49,28 @@ $email=$row['Email'];
    </head>
 
    <body>
+
+      <div class='navBar2'>
+        <button onclick="myFunction()" class="dropbtn">Menu</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href='admin_page.php'>Home</a>
+          <a href='doctorsList.php'>Manage doctors</a>
+          <a href='nursesList.php'>Manage nurses</a>
+
+
+        </div>
+      </div>
       
       <main>
       <div class='navBar'>
          <div class="image_placeholder">
             <img src="">
          </div>
-         <div class="name_placeholder">
+         <!-- <div class="name_placeholder">
             <b id="Fname" ><?php echo $first_name;?></b>
             <b id="Lname" ><?php echo $last_name;?></b>
          </div>
-         <b id="emailVal"><?php echo $email;?></b>
+         <b id="emailVal"><?php echo $email;?></b> -->
          <img>
          <a class='button' id = "adminHomepg1" href='admin_page.php'>Home</a>
          <a class='button' id="doctorsListpg1" href='doctorsList.php'>Manage doctors</a>
@@ -67,14 +78,6 @@ $email=$row['Email'];
          <a class='button' href='logout.php' id='signOut'>SignOut</a>
       </div>
 
-      <div class='navBar2'>
-         <button onclick="myFunction()" class="dropbtn">Menu</button>
-         <div id="myDropdown" class="dropdown-content">
-         <a href='admin_page.php'>Home</a>
-         <a href='doctorsList.php'>Manage doctors</a>
-         <a href='nursesList.php'>Manage nurses</a>
-         </div>
-      </div>
 
       <p class="statusTitle">Status</p>
       <p class="doctorTitle">Quickview doctors</p>
@@ -194,4 +197,21 @@ $email=$row['Email'];
             </div>
          </div>
       </div>
+
+      <script>
+    function closeAllSelect(elmnt) {
+      /* A function that will close all select boxes in the document,
+      except the current select box: */
+      var x, y, i, xl, yl, arrNo = [];
+      x = document.getElementsByClassName("select-items");
+      y = document.getElementsByClassName("select-selected");
+      xl = x.length;
+      yl = y.length;
+      for (i = 0; i < yl; i++) {if (elmnt == y[i]) {arrNo.push(i)} else {y[i].classList.remove("select-arrow-active");} }
+      for (i = 0; i < xl; i++) {if (arrNo.indexOf(i)) {x[i].classList.add("select-hide");} }
+    } /* If the user clicks
+    anywhere outside the select box, then close all select boxes: */ document.addEventListener("click", closeAllSelect);
+    function myFunction() {document.getElementById("myDropdown").classList.toggle("show");}
+  </script> -->
+
    </body>

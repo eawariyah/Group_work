@@ -42,8 +42,10 @@ $res = $conn->query($qry);
       </div>
 
       <p class="statusTitle">Status</p>
-      <p class="doctorTitle">Doctor</p>
-      <p class="nurseTitle">Nurses</p>
+      <p class="doctorTitle">Quickview doctors</p>
+      <p class="nurseTitle">Quickview nurses</p>
+      <p class="welcomeNote">Welcome Admin!</p>
+
 
             <div class='numberPatients' id='numberPatients'>
                <i class='fa fa-warning' style="font-size:24px;"></i>
@@ -98,6 +100,7 @@ $res = $conn->query($qry);
                   
                <table id="nurseTable">
                   <tr>
+                     <th>ID</th>
                      <th>FirstName</th>
                      <th>LastName</th>
                      <th>Email</th>

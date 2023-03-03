@@ -18,6 +18,66 @@ html, body{
   border-radius: 15px;
   padding-bottom: 1em;
 }
+.canvas .doctorTable1{
+position: absolute;
+right: 48.5%;
+bottom: 57%;
+background-color: white;
+width: 30%;
+border-radius: 5px;
+border: none;
+height: 20%;
+/* border: 0.5px solid #0000009f; */
+border-radius: 7px;
+border: 0.5px solid #d5e9f3;
+box-shadow: 0 3px 5px 0 rgb(95 95 97 / 30%);
+}
+
+.innerTools .canvas .doctorTitle{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  font-family: "Inter";
+  font-weight: 900;
+  font-size: 2em;
+}
+
+.innerTools .canvas .doctorTable1{
+  position: absolute;
+  top: 18%;
+  width: 20%;
+  height: 20%;
+  left: 0.5%;
+  font-size: 1em;
+  font-weight: 600;
+  border-radius: 7px;
+  border: 0.5px solid #d5e9f3;
+  box-shadow: 0 3px 5px 0 rgb(95 95 97 / 30%);
+  overflow-y: scroll;
+  overflow-x: scroll;
+  }
+  .innerTools .canvas .content {
+    margin-left: 200px;
+    padding: 50px;
+    top: 0;  
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #656565;
+    color: white;
+  }
+
 .navBar > a{
   text-decoration: none;
   font-size: 22px;
@@ -121,6 +181,18 @@ html, body{
   bottom: 50%;
   left: 5%;
 }
+
+#doctorsHomepg1{
+  position: absolute;
+  bottom: 50%;
+  left: 5%;
+}
+#calendarpg1{
+  position: absolute;
+  bottom: 40.5%;
+  left: 5%;
+}
+
 #doctorsListpg1{
   position: absolute;
   bottom: 40.5%;

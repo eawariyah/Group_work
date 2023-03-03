@@ -1,3 +1,31 @@
+<?php
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "clinic_db";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Retrieve data from the database table
+$sql = "SELECT * FROM patients";
+$result = $conn->query($sql);
+$qry = "SELECT * FROM employee where emp_role='n'"; 
+$res = $conn->query($qry);
+// $abc= "SELECT Firstname,Lastname,Email FROM employee where emplyee_id=$_SESSION[uid]";
+
+$results_nurse = mysqli_query($conn, "SELECT COUNT(*) FROM employee where emp_role='n'"); 
+$number_of_nurse_rows = mysqli_fetch_row($results_nurse); 
+
+$results_doctors = mysqli_query($conn, "SELECT COUNT(*) FROM employee where emp_role='d'"); 
+$number_of_doctor_rows = mysqli_fetch_row($results_doctors);
+
+// $results = mysqli_query($conn, $abc); 
+$row=mysqli_fetch_assoc($result);
+// $first_name=$row['FirstName'];
+// $last_name=$row['LastName'];
+// $email=$row['Email'];
+?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -21,8 +49,8 @@
 
       <b id="emailVal">Fname.lname@abc.com</b>
          <img>
-         <a class='button' id = "doctorsHomepg" href='doctorsHome.php'>Home</a>
-         <a class='button' id = "doctorsHomepg" href='./../backend/frontend/dailyAppointmentsView.php'>Schedule</a>
+         <a class='button' id = "doctorsHomepg1" href='doctorsHome.php'>Home</a>
+         <a class='button' id = "calendarpg1" href='./../backend/frontend/dailyAppointmentsView.php'>Schedule</a>
          <a class='button' id="nursesListpg" href='nursesList.php'>Nurses</a>
          <a class='button' id="createTaskpg" href='./../backend/frontend/createTaskView.php'>Create Task</a>
          <a class='button' id="patientpg" href='patientsList.php'>Patients</a>
@@ -43,7 +71,7 @@
          <div class='informationBar'>
             <div>
               <p id="pageName">Home</p>
-              <p id="welcomeNote">Welcome!</p>
+              <p id="welcomeNote">Welcome Doctor!</p>
             </div>
             <div class='informationBlock' id='informationBlock1'>
                <i class='fa fa-info-circle' style="font-size:24px;"></i>
@@ -66,9 +94,48 @@
             </div>
          </div>
          <div class='innerTools'>
+
             <div class='canvas' id='canvas' , name='canvas'>
-               "Canvas Info here"
+
+            <p class="doctorTitle">Quickview doctors</p>
+
+               
+            <table class = 'doctorTable1'>
+                  <tr>
+                     <th>ID</th>
+                     <th>Firstname</th>
+                     <th>Lastname</th>
+                     <th>PhoneNumber</th>
+                     <th>Email</th>
+                  </tr>
+                  <?php
+                     if ($result->num_rows > 0) {
+                       while($row = $result->fetch_assoc()) {
+                         echo "<tr>
+                                <td>".$row["Patient_Id"]."</td>
+                                <td>". $row["Firstname"]. "</td>
+                                <td>".$row["Lastname"]."</td>
+                                <td>".$row["PhoneNumber"]."</td>
+                                <td>".$row["Email"]."</td>                                
+                                
+                                </td>
+                                </tr>";
+                               //  <td><a href='Update.php?doctor_id=".$row["Doctor_Id"]."'>delete</a></td>
+                               //  <td><a href='Update.php?doctor_id=".$row["update"]."'>update</a></td>
+                       }
+                       
+                     } else {
+                       echo "<tr>
+                             <td colspan='3'>No data found</td>
+                             </tr>";
+                     }
+                     ?>
+                     <!-- <td><button><a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a></button></td>
+                                <td><button><a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a></button> -->
+               </table>
             </div>
+
+
             <div class="clock">
                <div class="hour"></div>
                <div class="min"></div>

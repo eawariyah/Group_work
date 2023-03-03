@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 03, 2023 at 12:10 AM
+-- Generation Time: Mar 03, 2023 at 04:40 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -133,7 +133,7 @@ CREATE TABLE `employee` (
 --
 
 INSERT INTO `employee` (`emplyee_id`, `FirstName`, `LastName`, `Email`, `emp_pass`, `PhoneNumber`, `Gender`, `emp_role`, `Specialization`) VALUES
-(11, 'Ernestina', 'Torto', 'ernest.torto@clinic.com', '$2y$10$30Stq58GfvbtAJqHdnR4LeoPfRVyb91RRs4O6HiMuCB65.3obYsd.', '1234567', 'female', 'd', 'Immunology'),
+(11, 'Ernestina', 'Torto', 'ernest.torto@clinic.com', '$2y$10$30Stq58GfvbtAJqHdnR4LeoPfRVyb91RRs4O6HiMuCB65.3obYsd.', '1234567', 'male', 'd', 'none'),
 (12, 'Dorcas', 'Torto', 'dorcas.adjei@clinic.com', '$2y$10$Ubo.aDMXYN7Hds3HaZt7f.AS4lhKHToU8hhw0w93Gz8yW1ONY8Z7S', '23456789098755', 'female', 'a', NULL),
 (13, 'Dorcas', 'Torto', 'dorcas.adjei@clinic.com', '$2y$10$coli8TDswx7L6OKHlimFguVkYpfp0Vt0ihakPogwoM6B6Ixgt2zKC', '23456789098755', 'female', 'a', NULL),
 (14, 'Ernestina', 'Adjei', 'ernestina.adjei@clinic.com', '$2y$10$lZABX38CLz7xGCVpVdrWGOk3Er.94e.7ac8BDP9FLG4mNIm8LaA5a', '23456789098755', 'female', 'a', 'none'),
@@ -142,7 +142,9 @@ INSERT INTO `employee` (`emplyee_id`, `FirstName`, `LastName`, `Email`, `emp_pas
 (23, 'Averch', 'Jean', 'averch.jean@clinic.com', '$2y$10$s1jrd.Uzd66VGK4sQY.8LuqKNLN2wypyAMYBBYZpZKu/vTr74y/qq', '1234567', 'male', 'n', 'none'),
 (24, 'Edwin', 'Awariyah', 'edwin.awariyah@clinic.com', '$2y$10$bUqZ6XfpcCoFSe6cdBH9Aud6keyMa/dZQ7joG3NsShiPtXM13.R5O', '2345678987654', 'male', 'a', 'none'),
 (25, 'Nice', 'Cailie', 'nice.cailie@clinic.com', '$2y$10$Q5xrf0C8yN6L5YI9RvxF4eJjcyzByVJAbhwsu7jquYs4pIbbOXpxi', '1234567', 'female', 'n', 'none'),
-(26, 'Ella', 'Addy', 'ella.addy@clinic.com', '$2y$10$/G8HHT/Uy2cdt6jDCKouWuxChs1xaSIEt182GdNlkZU.adcbolkbi', '23456789134', 'female', 'n', 'none');
+(26, 'Ella', 'Addy', 'ella.addy@clinic.com', '$2y$10$/G8HHT/Uy2cdt6jDCKouWuxChs1xaSIEt182GdNlkZU.adcbolkbi', '23456789134', 'female', 'd', 'Dermatology'),
+(29, 'Patience', 'Ado', '', '$2y$10$RB5KmNEYh5uQd7F3GywqFelPAOgbZdDDS.zyOjL9gLJhZgF8SkgzK', '', '', '', ''),
+(31, 'Averch', 'Adjei', 'averch.adjei@clinic.com', '$2y$10$GEVqKccGOxQiBYaQdkFa3eLBIATbiEEKnj0FMoVoR2nXPrLVmUWZG', '23456789134', 'male', 'd', 'Dermatology');
 
 -- --------------------------------------------------------
 
@@ -193,18 +195,28 @@ CREATE TABLE `nurses_tasks` (
 
 CREATE TABLE `patients` (
   `Patient_Id` int(11) NOT NULL,
-  `Firstname` varchar(30) DEFAULT NULL,
-  `Lastname` varchar(30) DEFAULT NULL,
+  `Firstname` varchar(30) NOT NULL,
+  `Lastname` varchar(30) NOT NULL,
   `Gender` varchar(6) NOT NULL,
-  `DOB` date DEFAULT NULL,
-  `Height` decimal(10,0) DEFAULT NULL,
-  `Patient_weight` decimal(10,0) NOT NULL,
-  `Ethnicity` varchar(50) DEFAULT NULL,
-  `BloodGroup` char(3) NOT NULL,
+  `DOB` varchar(15) NOT NULL,
+  `Height` varchar(4) NOT NULL,
+  `Patient_weight` varchar(5) NOT NULL,
+  `Ethnicity` varchar(50) NOT NULL,
+  `BloodGroup` varchar(3) NOT NULL,
   `MedicalHistory` varchar(10000) NOT NULL,
   `Email` varchar(255) NOT NULL,
-  `PhoneNumber` int(11) NOT NULL
+  `PhoneNumber` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `patients`
+--
+
+INSERT INTO `patients` (`Patient_Id`, `Firstname`, `Lastname`, `Gender`, `DOB`, `Height`, `Patient_weight`, `Ethnicity`, `BloodGroup`, `MedicalHistory`, `Email`, `PhoneNumber`) VALUES
+(1037, 'Ernest', 'Adjei', 'male', '1990-12-03', '23.4', '123.4', 'Asian', 'O', 'Cough,cold,headache,AIDS,COVID', 'averch.jean@gmail.com', '2147483647'),
+(1038, 'Ernest', 'Jean', 'male', '1990-12-03', '23.4', '123.4', 'Asian', 'O', 'Cough,cold,headache,AIDS,COVID', 'averch.jean@gmail.com', '123456765432'),
+(1039, 'Dougg', 'Adjei', 'male', '0000-00-00', '23.4', '123.4', 'Asian', 'O', 'Cough,cold,headache,AIDS,COVID', 'averch.jean@gmail.com', '123456765432'),
+(1043, 'Ernestina', 'Cailie', 'male', '.12/03/1990.', '23.4', '123.4', 'Asian', 'AB', 'Cough,cold,headache,AIDS,COVID', 'averch.jean@gmail.com', '123456765432');
 
 -- --------------------------------------------------------
 
@@ -282,13 +294,13 @@ ALTER TABLE `user_table`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `emplyee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `emplyee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `patients`
 --
 ALTER TABLE `patients`
-  MODIFY `Patient_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1035;
+  MODIFY `Patient_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1044;
 
 --
 -- AUTO_INCREMENT for table `user_table`

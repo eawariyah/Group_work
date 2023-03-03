@@ -1,4 +1,16 @@
 <?php
+   session_start();
+		if ($_SESSION['uid']){
+			if ($_SESSION['user_role']=='a'){
+				
+         }
+		}
+		else{
+			echo header("Location: login_page.php");
+			exit();
+		}
+      ?>
+<?php
 // Database connection
 $servername = "localhost";
 $username = "root";
@@ -12,13 +24,19 @@ $sql = "SELECT * FROM employee where emp_role='d'";
 $result = $conn->query($sql);
 $qry = "SELECT * FROM employee where emp_role='n'"; 
 $res = $conn->query($qry);
-
+$abc= "SELECT Firstname,Lastname,Email FROM employee where emplyee_id=$_SESSION[uid]";
 
 $results_nurse = mysqli_query($conn, "SELECT COUNT(*) FROM employee where emp_role='n'"); 
 $number_of_nurse_rows = mysqli_fetch_row($results_nurse); 
 
 $results_doctors = mysqli_query($conn, "SELECT COUNT(*) FROM employee where emp_role='d'"); 
 $number_of_doctor_rows = mysqli_fetch_row($results_doctors);
+
+$results = mysqli_query($conn, $abc); 
+$row=mysqli_fetch_assoc($result);
+$first_name=$row['FirstName'];
+$last_name=$row['LastName'];
+$email=$row['Email'];
 ?>
 
 <!DOCTYPE html>
@@ -31,16 +49,17 @@ $number_of_doctor_rows = mysqli_fetch_row($results_doctors);
    </head>
 
    <body>
-
+      
       <main>
       <div class='navBar'>
          <div class="image_placeholder">
             <img src="">
          </div>
          <div class="name_placeholder">
-            <b id="Fname">Fname lname</b>
+            <b id="Fname" ><?php echo $first_name;?></b>
+            <b id="Lname" ><?php echo $last_name;?></b>
          </div>
-         <b id="emailVal">Fname.lname@abc.com</b>
+         <b id="emailVal"><?php echo $email;?></b>
          <img>
          <a class='button' id = "adminHomepg1" href='admin_page.php'>Home</a>
          <a class='button' id="doctorsListpg1" href='doctorsList.php'>Manage doctors</a>

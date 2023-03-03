@@ -1,15 +1,15 @@
 <?php
-  //  session_start();
-	// 	if ($_SESSION['uid']){
-	// 		if ($_SESSION['user_role']=='a'){
+  ession_start();
+	if ($_SESSION['uid']){
+	if ($_SESSION['user_role']=='a'){
 				
-  //        }
-	// 	}
-	// 	else{
-	// 		echo header("Location: login_page.php");
-	// 		exit();
-		// }
-    //   ?>
+   }
+	}
+	else{
+		echo header("Location: login_page.php");
+	exit();
+	 }
+      ?>
 <?php
 // Database connection
 $servername = "localhost";
@@ -65,11 +65,11 @@ $row=mysqli_fetch_assoc($result);
          <div class="image_placeholder">
             <img src="">
          </div>
-         <!-- <div class="name_placeholder">
+         <div class="name_placeholder">
             <b id="Fname" ><?php echo $first_name;?></b>
             <b id="Lname" ><?php echo $last_name;?></b>
          </div>
-         <b id="emailVal"><?php echo $email;?></b> -->
+         <b id="emailVal"><?php echo $email;?></b> 
          <img>
          <a class='button' id = "adminHomepg1" href='admin_page.php'>Home</a>
          <a class='button' id="doctorsListpg1" href='doctorsList.php'>Manage doctors</a>

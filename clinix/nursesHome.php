@@ -22,10 +22,8 @@
       <b id="emailVal">Fname.lname@abc.com</b>
       <img>
       <a class='button' id = "doctorsHomepg"; href='nursesHome.php'>Home</a>
-      <a class='button' id = "calendarpg"; href='calendar.php'>Calendar</a>
       <a class='button' id = "patientsListpg"; href='patientsList.php'>Patients</a>
-      <a class='button' id = "nursesListpg"; href='nursesList.php'>View Doctors</a>
-      <a class='button' id = "createTaskpg"; href='createTask.php'>Create Appointment</a>
+      <a class='button' id = "createTaskpg"; href='/backend/frontend/createAppointmentView.php'>Create Appointment</a>
       <a class='button' id = "patientpg"; href='createPatient.php'>Create a patient</a>
       <a class='button' href='logout.php' id='signOut'>SignOut</a>
     </div>
@@ -33,9 +31,11 @@
     <div class='navBar2'>
       <button onclick="myFunction()" class="dropbtn">Menu</button>
       <div id="myDropdown" class="dropdown-content">
-        <a href="createAppointment.php">Link 1</a>
-        <a href="landingPage.php">Home</a>
-        <a href="nursesList.php">NursesList</a>
+      <a href='nursesHome.php'>Home</a>
+      <a href='patientsList.php'>Patients</a>
+      <a href='/backend/frontend/createAppointmentView.php'>Create Appointment</a>
+      <a href='createPatient.php'>Create a patient</a>
+      <a href='logout.php' id='signOut'>SignOut</a>
       </div>
     </div>
 

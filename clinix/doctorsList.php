@@ -32,9 +32,9 @@ $res = $conn->query($qry);
   <div class='navBar2'>
     <button onclick="myFunction()" class="dropbtn">Menu</button>
     <div id="myDropdown" class="dropdown-content">
-      <a href="createAppointment.php">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+      <a href="/backend/frontend/createAppointmentView.php">Create Appointment</a>
+      <a href="/backend/frontend/dailyTasksView.php">Schedule</a>
+      <a href="logout.php">Sing out</a>
     </div>
   </div>
 

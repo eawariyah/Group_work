@@ -13,10 +13,10 @@
   <div class='navBar'>
     <button onclick="myFunction()" class="dropbtn">Menu</button>
     <div id="myDropdown" class="dropdown-content">
-      <a href="landingPage.php">Dashboard</a>
-      <a href="doctorsList.php">Nurses</a>
-      <a href="dailySchedule.php">Schedule</a>
-      <a href="#">SignOut</a>
+    <a href="./../doctorsHome.php">Dashboard</a>
+    <a href="createTasksView.php">Create Task</a>
+      <a href="dailyAppointmentsView.php">Schedule</a>
+      <a href="logout.php">SignOut</a>
     </div>
   </div>
 

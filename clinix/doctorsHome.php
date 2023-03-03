@@ -23,7 +23,6 @@
          <img>
          <a class='button' id = "doctorsHomepg" href='doctorsHome.php'>Home</a>
          <a class='button' id = "doctorsHomepg" href='/backend/frontend/dailyAppointmentsView.php'>Schedule</a>
-         <a class='button' id="patientsListpg" href='patientsList.php'>Patients</a>
          <a class='button' id="nursesListpg" href='nursesList.php'>Nurses</a>
          <a class='button' id="createTaskpg" href='/backend/frontend/createTaskView.php'>Create Task</a>
          <a class='button' id="patientpg" href='patient.php'>A patient</a>

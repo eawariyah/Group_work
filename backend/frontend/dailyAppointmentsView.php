@@ -13,23 +13,19 @@
   <main>
   <div class='navBar'>
       <img>
-      <a class='button' href='doctorsHome.html'>Home</a>
-      <a class='button' href='dailyActivities.html'>Schedule</a>
-      <a class='button' href='patientsList.html'>Patients</a>
-      <a class='button' href='nursesList.html'>Nurses</a>
-      <a class='button' href='createTask.html'>Create Task</a>
-      <a class='button' href='modal.html'>SignOut</a>
+      <a href="./../doctorsHome.php">Dashboard</a>
+      <a href="createTaskView.php">Create Task</a>
+      <a href="dailyAppointmentsView.php">Schedule</a>
+      <a href="logout.php">SignOut</a>
     </div>
   
     <div class='navBar2'>
       <button onclick="myFunction()" class="dropbtn">Menu</button>
       <div id="myDropdown" class="dropdown-content">
-        <a href="#">Home</a>
-        <a href="#">Schedule</a>
-        <a href="#">Patients</a>
-        <a href="#">Nurses</a>
-        <a href="#">Create Task</a>
-        <a href="#">Sign out</a>
+      <a href="./../doctorsHome.php">Dashboard</a>
+      <a href="createTaskView.php">Create Task</a>
+      <a href="dailyAppointmentsView.php">Schedule</a>
+      <a href="logout.php">SignOut</a>
       </div>
     </div>
 

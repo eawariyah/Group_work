@@ -81,12 +81,8 @@
                     <td>".$row["Email"]."</td>
                     <td>".$row["PhoneNumber"]."</td>
                     <td>".$row["Gender"]."</td>
-<<<<<<< HEAD
                    
                         </td>
-                  
-=======
-                    
 
 
                     <td>
@@ -95,14 +91,10 @@
                     </button>&nbsp;&nbsp;&nbsp;&nbsp;
   
                     <button class='update_button' role='button'>
-                    View
-                    </button>&nbsp;&nbsp;&nbsp;&nbsp;
-  
-                    <button class='update_button' role='button'>
                     <a href='delete.php?deleteid=".$row["emplyee_id"]."'>Delete</a>
 
                   </td>                  
->>>>>>> 5bc6b4248c15bc39657cce2635cd9cc22206c012
+
                   </tr>";
                     
                   

@@ -52,16 +52,16 @@ if (isset($_POST['login']))
 		
 		session_start();
 		$_SESSION['uid'] = $finalData['emplyee_id'];
-		$_SESSION['urole'] = $finalData['emp_role'];
+		$_SESSION['user_role'] = $finalData['emp_role'];
 
-        if($_SESSION['urole']=='a'){
+        if($_SESSION['user_role']=='a'){
         header("Location: admin_page.php");}
 
-		if($_SESSION['urole']=='d'){
+		if($_SESSION['user_role']=='d'){
 			header("Location: doctorsHome.php");
 		}
 
-		if ($_SESSION['urole']=='n'){
+		if ($_SESSION['user_role']=='n'){
 			header("Location: nursesHome.php");}
 	  }
         else {

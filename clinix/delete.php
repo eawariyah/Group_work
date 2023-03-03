@@ -16,7 +16,7 @@ $result = $conn->query($sql);
 
 if ($result){
     // echo"deleted successfully";
-    header('location: admin_page.php');
+    header('location: doctorsList.php');
 }
 
 }

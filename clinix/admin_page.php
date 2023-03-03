@@ -35,15 +35,17 @@ $res = $conn->query($qry);
          </div>
          <b id="emailVal">Fname.lname@abc.com</b>
          <img>
-         <a class='button' id = "doctorsHomepg" href='admin_page.php'>Home</a>
+         <a class='button' id = "adminHomepg1" href='admin_page.php'>Home</a>
          <a class='button' id="doctorsListpg1" href='doctorsList.php'>Doctors</a>
-         <a class='button' id="nursesListpg" href='nursesList.php'>Nurses</a>
+         <a class='button' id="nursesListpg1" href='nursesList.php'>Nurses</a>
          <a class='button' href='logout.php' id='signOut'>SignOut</a>
       </div>
 
       <p class="statusTitle">Status</p>
-      <p class="doctorTitle">Doctor</p>
-      <p class="nurseTitle">Nurses</p>
+      <p class="doctorTitle">Quickview doctors</p>
+      <p class="nurseTitle">Quickview nurses</p>
+      <p class="welcomeNote">Welcome Admin!</p>
+
 
             <div class='numberPatients' id='numberPatients'>
                <i class='fa fa-warning' style="font-size:24px;"></i>
@@ -98,6 +100,7 @@ $res = $conn->query($qry);
                   
                <table id="nurseTable">
                   <tr>
+                     <th>ID</th>
                      <th>FirstName</th>
                      <th>LastName</th>
                      <th>Email</th>

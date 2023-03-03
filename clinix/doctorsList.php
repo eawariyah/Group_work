@@ -33,12 +33,8 @@ $res = $conn->query($qry);
     <button onclick="myFunction()" class="dropbtn">Menu</button>
     <div id="myDropdown" class="dropdown-content">
       <a href='doctorsHome.php'>Home</a>
-      <a href='calendar.php'>Calendar</a>
       <a href='patientsList.php'>Patients</a>
       <a href='nursesList.php'>Nurses</a>
-      <a href='createTask.php'>Create Task</a>
-      <a href='patient.php'>A patient</a>
-
     </div>
   </div>
 
@@ -53,14 +49,11 @@ $res = $conn->query($qry);
          <b id="emailVal">Fname.lname@abc.com</b>
          <img>
          <a class='button' id = "doctorsHomepg" href='doctorsHome.php'>Home</a>
-         <a class='button' id="calendarpg" href='calendar.php'>Calendar</a>
          <a class='button' id="patientsListpg" href='patientsList.php'>Patients</a>
+         <a class='button' id="doctorsListpg" href='doctorsList.php'>Doctors</a>
          <a class='button' id="nursesListpg" href='nursesList.php'>Nurses</a>
-         <a class='button' id="createTaskpg" href='createTask.php'>Create Task</a>
-         <a class='button' id="patientpg" href='patient.php'>A patient</a>
          <a class='button' href='logout.php' id='signOut'>SignOut</a>
       </div>
-
 
       <a class='button' id = "addnurse" href='createEmployee.php'>Add Employee</a><br><br>
 
@@ -91,9 +84,6 @@ $res = $conn->query($qry);
                                 <td>
                                     <button class='update_button' role='button'>
                                       <a href='update.php?updateid=".$row["emplyee_id"]."'>Update</a>
-                                    </button>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <button class='update_button' role='button'>
-                                    View
                                     </button>&nbsp;&nbsp;&nbsp;&nbsp;
 
                                     <button class='update_button' role='button'>

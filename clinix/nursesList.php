@@ -32,7 +32,6 @@
     <button onclick="myFunction()" class="dropbtn">Menu</button>
     <div id="myDropdown" class="dropdown-content">
       <a href='doctorsHome.php'>Home</a>
-      <a href='calendar.php'>Calendar</a>
       <a href='patientsList.php'>Patients</a>
       <a href='nursesList.php'>Nurses</a>
       <a href='createTask.php'>Create Task</a>

@@ -5,7 +5,7 @@ require dirname (__FILE__)."/../controllers/appointments_controller.php";
 if (isset($_POST['assignAppointment'])) {
 	echo "Assigning Appointment!";
 
-	$nurseID = 'NR5';
+	$nurseID = $_SESSION['uid'];
 	$patientID = $_POST['patientID'];
 	$doctorID = $_POST['selectDoctor'];
 	$app_date = $_POST['selectTaskDate'];

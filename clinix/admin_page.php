@@ -48,6 +48,15 @@ $number_of_doctor_rows = mysqli_fetch_row($results_doctors);
          <a class='button' href='logout.php' id='signOut'>SignOut</a>
       </div>
 
+      <div class='navBar2'>
+         <button onclick="myFunction()" class="dropbtn">Menu</button>
+         <div id="myDropdown" class="dropdown-content">
+         <a href='admin_page.php'>Home</a>
+         <a href='doctorsList.php'>Manage doctors</a>
+         <a href='nursesList.php'>Manage nurses</a>
+         </div>
+      </div>
+
       <p class="statusTitle">Status</p>
       <p class="doctorTitle">Quickview doctors</p>
       <p class="nurseTitle">Quickview nurses</p>
@@ -56,6 +65,7 @@ $number_of_doctor_rows = mysqli_fetch_row($results_doctors);
 
             <div class='numberPatients' id='numberPatients'>
                <i class='fa fa-warning' style="font-size:24px;"></i>
+               <img src="session-iceblue.png" class = "doctorLogo">
                <h2 class = 'nurseSize1'>Nurses</h2>
                <p class = 'nurseSize'>
                   <?php

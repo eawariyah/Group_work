@@ -18,7 +18,6 @@ $password = "";
 $dbname = "clinic_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
-
 // Retrieve data from the database table
 $sql = "SELECT * FROM employee where emp_role='d'";
 $result = $conn->query($sql);

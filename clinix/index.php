@@ -28,9 +28,6 @@
             <p style="color: rgb(0, 0, 0);"><b>Discover Today!<b></p>
         </div>
 
-        <div class = "login_placeholder">
-            <p style="color: rgb(0, 0, 0);">Login</p>
-        </div>
         
     </div>
 <a href="login_page.php">

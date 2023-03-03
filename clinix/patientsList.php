@@ -57,11 +57,12 @@
       </div>
     </div>
     
-    <a class='button' id = "addnurse" href='createPatient.php'>Add Patient</a>
+    <a class='button' id = "addnurse" href='createPatient.php'>Add Patient</a><br><br>
+
     <div class = "left">
     
                <h2>Patients</h2>
-               <table id = 'doctorTable'>
+               <table id = 'patientsTable'>
                   <tr>
                      <th>ID</th>
                      <th>Firstname</th>
@@ -80,7 +81,7 @@
                      if ($result->num_rows > 0) {
                        while($row = $result->fetch_assoc()) {
                          echo "<tr>
-                                <td>".$row["Patient_id"]."</td>
+                                <td>".$row["Patient_Id"]."</td>
                                 <td>". $row["Firstname"]. "</td>
                                 <td>".$row["Lastname"]."</td>
                                 <td>".$row["Gender"]."</td>
@@ -93,8 +94,7 @@
                                 <td>".$row["Email"]."</td>
                                 <td>".$row["PhoneNumber"]."</td>
                                 
-                                <td><button><a href='update.php?updateid=".$row["Patient_id"]."'>Update</a></button></td>
-                                <td><button><a href='delete.php?deleteid=".$row["Patient_id"]."'>Delete</a></button>
+                               
                                 </td>
                                 </tr>";
                                //  <td><a href='Update.php?doctor_id=".$row["Doctor_Id"]."'>delete</a></td>
@@ -108,7 +108,7 @@
                      }
                      ?> 
                </table>
-                    </div>
+                  
     <!-- <div class='personGrid'>
       <div class='person'>
         <img src="img.jpg" alt="John" style="width:100%">

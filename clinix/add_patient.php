@@ -3,20 +3,21 @@
 
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "clinic_db";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+
+if (isset($_POST['Submit'])) 
+{
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "clinic_db";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
 	// Check connection
 	if ($conn->connect_error) {
 		//stop executing the code and echo error
 	  die("Connection failed: " . $conn->connect_error);
 	} 
-
-if (isset($_POST['Submit'])) 
-{
     //Get the user_ID and password from the form 
     $firstname = $_POST['f_name'];
     $lastname = $_POST['l_name'];

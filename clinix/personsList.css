@@ -44,6 +44,17 @@ html, body {
   font-weight: 600;
 }
 
+#patientsTable{
+  position: absolute;
+  bottom: 58%;
+  left: 21%;
+  width: 58%;
+  height: 20%;
+  font-size: 0.8em;
+  font-weight: 600;
+  overflow-y: scroll;
+}
+
 #doctorTable{
   position: absolute;
   bottom: 66%;

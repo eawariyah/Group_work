@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 03, 2023 at 07:45 AM
+-- Generation Time: Mar 03, 2023 at 09:27 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -20,78 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `clinic_db`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `all_doctor`
---
-
-CREATE TABLE `all_doctor` (
-  `Doctor_Id` varchar(20) NOT NULL DEFAULT '',
-  `Firstname` varchar(30) DEFAULT NULL,
-  `Password` varchar(30) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `all_doctor`
---
-
-INSERT INTO `all_doctor` (`Doctor_Id`, `Firstname`, `Password`) VALUES
-('user_Id', 'Adjei_Patrick', '$2y$10$ywYlMYZAnfbcVTR8HqZSw.g'),
-('user_Id', 'Adjei_Patrick', '$2y$10$Sn2gI5sqQzW8upaEL7Wfuey'),
-('user_Id', 'Adjei_', '$2y$10$FHct2YSbsGwxLOIKY6VovOu'),
-('user_Id', 'Manu_Peter', '$2y$10$5leTXZKhAMex0eYzIdt9Tez'),
-('D785456', 'Manu_Dav', '$2y$10$Fo9tWs2lKNH16B/Pr4gYdOR'),
-('12345', 'Micheal', '$2y$10$rLEsc30WcM6D43bHDWej5OV');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `all_nurses`
---
-
-CREATE TABLE `all_nurses` (
-  `Nurse_Id` varchar(30) NOT NULL,
-  `FirstName` varchar(50) NOT NULL,
-  `Password` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `doctor`
---
-
-CREATE TABLE `doctor` (
-  `Doctor_Id` varchar(20) NOT NULL,
-  `Firstname` varchar(30) DEFAULT NULL,
-  `Lastname` varchar(30) DEFAULT NULL,
-  `Gender` char(1) DEFAULT NULL,
-  `Room_office` int(11) DEFAULT NULL,
-  `Specialization_Id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `doctor`
---
-
-INSERT INTO `doctor` (`Doctor_Id`, `Firstname`, `Lastname`, `Gender`, `Room_office`, `Specialization_Id`) VALUES
-('D123789', 'Aryee-Boi', 'Jeannette', 'F', 581, 202327),
-('D129456', 'Dekor', 'Conrad', 'M', 145, 202335),
-('D456123', 'Adjei', 'Patrick', 'M', 457, 222729),
-('D456789', 'Ati', 'Emmanuel', 'M', 360, 202531),
-('D512496', 'Marfo', 'Albert', 'M', 144, 202523),
-('D781256', 'Andor', 'Matilda', 'F', 201, 222533),
-('D783156', 'Delsol_Gyan', 'Desrie', 'F', 562, 222727),
-('D789123', 'Duah', 'Amoako', 'F', 216, 202329),
-('D789456', 'Manu', 'Peter', 'M', 167, 202731),
-('D899456', 'Osei-Yeboah', 'Christina', 'F', 541, 202923),
-('D899001', 'Daniel', 'Dankwa', NULL, 122, NULL),
-('D899001', 'Daniel', 'Dankwa', NULL, 122, NULL),
-('D899001', 'Daniel', 'Dankwa', NULL, 122, NULL),
-('D899001', 'Daniel', 'Dankwa', NULL, 122, NULL),
-('D557001', 'Edwin', 'Awariyah', NULL, 203, NULL);
 
 -- --------------------------------------------------------
 
@@ -116,12 +44,17 @@ CREATE TABLE `doctors_appointments` (
 
 INSERT INTO `doctors_appointments` (`assignee_id`, `doctor_id`, `patient_id`, `appointment_date`, `start_time`, `end_time`, `description`, `appointment_status`) VALUES
 ('NR5', 'DR6', '', '0000-00-00', 0, 0, '', 'N'),
+('25', '26', '1037', '2023-03-01', 2, 3, 'Follow up on lungs assessment', 'N'),
+('22', '26', '1037', '2023-03-01', 3, 4, 'Diagnosis Review', 'N'),
 ('N1', 'D1', 'P1', '2023-03-01', 8, 9, 'Task A', 'N'),
 ('N2', 'D1', 'B78', '2023-03-01', 9, 10, 'Follow up consulation', 'N'),
 ('N3', 'D1', 'B78', '2023-03-01', 10, 11, 'Re-examination of Lungs', 'N'),
+('21', '26', '1037', '2023-03-01', 11, 12, 'Undisclosed', 'N'),
 ('NR5', 'DR6', '61162024', '2023-03-04', 8, 8, 'Lorem ipsum dolerum. This is a dummy appointment', 'N'),
 ('NR5', '`11`', '77788', '2023-03-05', 8, 8, 'Random appointment', 'N'),
 ('NR5', '`12`', '61162024', '2023-03-09', 8, 8, 'Lorem ipsum dolerum. This is a dummy appointment 2', 'N'),
+('21', '26', '1037', '2023-04-01', 2, 3, 'Undisclosed', 'N'),
+('21', '25', '1039', '2023-04-01', 3, 4, 'Follow up', 'N'),
 ('N2', 'D1', 'P2', '2023-04-01', 9, 10, 'Task B', 'N'),
 ('N2', 'D1', 'B78', '2023-05-01', 9, 10, 'Follow up consulation', 'N'),
 ('N1', 'D2', 'P3', '2023-05-01', 10, 11, 'Task A', 'N'),
@@ -209,6 +142,9 @@ CREATE TABLE `nurses_tasks` (
 --
 
 INSERT INTO `nurses_tasks` (`assignee_id`, `nurses_id`, `task_date`, `start_time`, `end_time`, `description`, `task_status`) VALUES
+('11', '25', '2023-03-01', 1, 2, 'Wash beddings in WARD G', 'N'),
+('11', '25', '2023-03-01', 2, 3, 'Complete monthly survey', 'N'),
+('31', '25', '2023-03-01', 3, 4, 'Organize Discharge of Patient 1038', 'N'),
 ('D3', 'N7', '2023-03-01', 10, 11, 'Washing Linen of Ward F', 'N'),
 ('B456', 'N7', '2023-03-03', 9, 10, 'Washing Linen of Ward C', 'N'),
 ('D2', 'N7', '2023-03-03', 10, 11, 'IV Check at Ward T', 'N'),
@@ -276,12 +212,6 @@ INSERT INTO `user_table` (`user_id`, `user_name`, `user_pass`, `user_role`, `use
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `all_nurses`
---
-ALTER TABLE `all_nurses`
-  ADD UNIQUE KEY `Nurse_Id` (`Nurse_Id`);
 
 --
 -- Indexes for table `doctors_appointments`

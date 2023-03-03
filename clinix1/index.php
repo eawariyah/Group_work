@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title> <!-- name homepage -->
-    <link rel="stylesheet" href="landingPage.css"> <!-- external css file called homepage_design -->
+    <link rel="stylesheet" href="/clinix1/landingPage.css"> <!-- external css file called homepage_design -->
 </head>
 
 <body>
@@ -30,7 +30,7 @@
 
         
     </div>
-<a href="login_page.php">
+<a href="/clinix1/login_page.php">
     <button class="admin_placement" value="Make Appointment" role="button"><b>Login</b></button>
 </a>
 

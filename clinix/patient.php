@@ -14,12 +14,12 @@
   <div class='navBar2'>
     <button onclick="myFunction()" class="dropbtn">Menu</button>
     <div id="myDropdown" class="dropdown-content">
-      <a href='doctorsHome.php'>Home</a>
-      <a href='calendar.php'>Calendar</a>
+      <a href='nursesHome.php'>Home</a>
       <a href='patientsList.php'>Patients</a>
-      <a href='nursesList.php'>Nurses</a>
-      <a href='createTask.php'>Create Task</a>
-      <a href='patient.php'>A patient</a>
+      <a href='/backend/frontend/createAppointmentView.php'>Create Appointment</a>
+      <a href='createPatient.php'>Create a patient</a>
+      <a href='logout.php' id='signOut'>SignOut</a>
+      </div>
     </div>
   </div>
 

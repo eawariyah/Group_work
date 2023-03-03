@@ -11,7 +11,7 @@ html, body{
   box-sizing: border-box;
 }
 
-.scheduleForm{
+form{
   width: 40%;
   background-color: #72A0C1;
   display: flex;
@@ -24,26 +24,10 @@ html, body{
   padding-bottom: 1em;
 }
 
-#assignTaskForm, #createAppointment{
-  visibility: hidden;
-}
-
-
 .taskDescr{
   width: 70%;
   margin: 0 auto;
-  height: 200px;
-  border: none;
-  background-color: white;
-  color: black;
-  border-radius: 1em;
-  font-size: 15px;
-}
-
-.patientID{
-  width: 70%;
-  margin: 0 auto;
-  height: 50px;
+  height: 100px;
   border: none;
   background-color: white;
   color: black;
@@ -59,6 +43,21 @@ html, body{
   border: none;
   border-radius: 1em;
   color: white;
+}
+
+#showFreeDoctors, #showFreeNurses, .assign{
+  cursor: pointer;
+}
+
+.patientID{
+  width: 70%;
+  margin: 0 auto;
+  height: 50px;
+  border: none;
+  background-color: white;
+  color: black;
+  border-radius: 1em;
+  font-size: 15px;
 }
 
 select {
@@ -121,13 +120,14 @@ a:link, a:visited, a:active, a:hover{
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px){
   body{
     display: flex;
+    width: 100%;
     flex-direction: column;
     padding: 0em;
   }
-  .scheduleForm{
+  form{
     width: 100%;
     padding: 0 em;
     box-shadow: none;

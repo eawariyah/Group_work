@@ -74,7 +74,9 @@
                   </tr>
                    <?php
                      if ($result->num_rows > 0) {
+                      
                        while($row = $result->fetch_assoc()) {
+                        $getid = $row['Patient_Id'];
                          echo "<tr>
                                 <td>".$row["Patient_Id"]."</td>
                                 <td>". $row["Firstname"]. "</td>
@@ -83,7 +85,8 @@
                                 <td>".$row["Email"]."</td>
                                 <td>".$row["PhoneNumber"]."</td>
                                 <td><a href='deletePatient.php?deleteid=".$row["Patient_Id"]."'>delete</a>
-                                <a href='updatePatient.php?updateid=".$row["Patient_Id"]."'>update</a></td>
+                                <a href='updatePatient.php?updateid=".$row["Patient_Id"]."'>update</a>
+                                <a href = 'viewPatient.php?uid=".$getid."'>View</a>'</td>
                                
                                 </td>
                                 </tr>";
@@ -145,4 +148,18 @@
   <script>
     function myFunction(){document.getElementById("myDropdown").classList.toggle("show");}
   </script>
+  <script type="text/javascript">
+
+//make http post to backend register_proc.php
+  function loadDoc(uid) 
+  {
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function() 
+      {
+        // document.getElementById("demo").innerHTML = this.responseText;
+         alert(this.responseText);
+       }
+      xhttp.open("GET", "viewing.php?uid="+uid, true);
+      xhttp.send();
+      }</script>
 </body>

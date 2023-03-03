@@ -22,10 +22,9 @@
       <b id="emailVal">Fname.lname@abc.com</b>
          <img>
          <a class='button' id = "doctorsHomepg" href='doctorsHome.php'>Home</a>
-         <a class='button' id="calendarpg" href='calendar.php'>Calendar</a>
-         <a class='button' id="patientsListpg" href='patientsList.php'>Patients</a>
+         <a class='button' id = "doctorsHomepg" href='/backend/frontend/dailyAppointmentsView.php'>Schedule</a>
          <a class='button' id="nursesListpg" href='nursesList.php'>Nurses</a>
-         <a class='button' id="createTaskpg" href='createTask.php'>Create Task</a>
+         <a class='button' id="createTaskpg" href='/backend/frontend/createTaskView.php'>Create Task</a>
          <a class='button' id="patientpg" href='patient.php'>A patient</a>
          <a class='button' href='logout.php' id='signOut'>SignOut</a>
       </div>
@@ -34,10 +33,10 @@
          <button onclick="myFunction()" class="dropbtn">Menu</button>
          <div id="myDropdown" class="dropdown-content">
          <a href='doctorsHome.php'>Home</a>
-         <a href='calendar.php'>Calendar</a>
+         <a href='/backend/frontend/dailyAppointmentsView.php'>Schedule</a>
          <a href='patientsList.php'>Patients</a>
          <a href='nursesList.php'>Nurses</a>
-         <a href='createTask.php'>Create Task</a>
+         <a href='/backend/frontend/createTaskView.php'>Create Task</a>
          <a href='patient.php'>A patient</a>
          </div>
       </div>

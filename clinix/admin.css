@@ -1,4 +1,20 @@
-    #numberPatients{
+#adminHomepg1{
+  position: absolute;
+  bottom: 31%;
+  left: 5%;
+}
+#doctorsListpg1{
+  position: absolute;
+  bottom: 21.5%;
+  left: 5%;
+}
+#patientpg{
+  position: absolute;
+  bottom: 12%;
+  left: 5%;
+}
+   
+   #numberPatients{
       position: absolute;
       right: 14%;
       bottom: 57%;

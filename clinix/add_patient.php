@@ -40,7 +40,7 @@ if (isset($_POST['Submit']))
    
     
     if($conn->query($sql)===True ){
-        header("Location: nursesHome.php");
+        header("Location: patientsList.php");
         exit();
     }
     else {echo "Error: " . $sql . "<br>" . $conn->error;}

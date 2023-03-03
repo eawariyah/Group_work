@@ -25,6 +25,18 @@ $res = $conn->query($qry);
    </head>
 
    <body>
+      <?php
+   session_start();
+		if ($_SESSION['uid']){
+			if ($_SESSION['user_role']=='a'){
+				echo ' welcome';
+         }
+		}
+		else{
+			echo header("Location: login_page.php");
+			exit();
+		}
+      ?>
       <main>
       <div class='navBar'>
          <div class="image_placeholder">

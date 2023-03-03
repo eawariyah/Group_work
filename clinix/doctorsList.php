@@ -57,6 +57,10 @@ $res = $conn->query($qry);
          <a class='button' href='logout.php' id='signOut'>SignOut</a>
       </div>
 
+
+      <a class='button' id = "addnurse" href='createEmployee.php'>Add Employee</a><br><br>
+
+
       <h2>Doctors</h2>
                <table id = 'doctorTable'>
                   <tr>

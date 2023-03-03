@@ -13,9 +13,9 @@
 <?php
 // Database connection
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "clinic_db";
+    $username = "ClinicXcare";
+    $password = "clinix@16";
+    $dbname = "clinic_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Retrieve data from the database table
@@ -211,6 +211,6 @@ $row=mysqli_fetch_assoc($result);
     } /* If the user clicks
     anywhere outside the select box, then close all select boxes: */ document.addEventListener("click", closeAllSelect);
     function myFunction() {document.getElementById("myDropdown").classList.toggle("show");}
-  </script> -->
+  </script> 
 
    </body>

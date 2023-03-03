@@ -1,9 +1,9 @@
 <?php
 if(isset($_GET['deleteid'])){
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "clinic_db";
+    $servername = "localhost";
+    $username = "ClinicXcare";
+    $password = "clinix@16";
+    $dbname = "clinic_db";
 
 
 $id=$_GET['deleteid']; 

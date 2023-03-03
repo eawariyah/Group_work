@@ -8,8 +8,8 @@
 if (isset($_POST['Submit'])) 
 {
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = "ClinicXcare";
+    $password = "clinix@16";
     $dbname = "clinic_db";
 
     $conn = new mysqli($servername, $username, $password, $dbname);

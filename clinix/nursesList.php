@@ -1,9 +1,9 @@
 <?php
    // Database connection
    $servername = "localhost";
-   $username = "root";
-   $password = "";
-   $dbname = "clinic_db";
+    $username = "ClinicXcare";
+    $password = "clinix@16";
+    $dbname = "clinic_db";
    
    $conn = new mysqli($servername, $username, $password, $dbname);
    

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 03, 2023 at 04:40 AM
+-- Generation Time: Mar 03, 2023 at 07:37 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -100,15 +100,32 @@ INSERT INTO `doctor` (`Doctor_Id`, `Firstname`, `Lastname`, `Gender`, `Room_offi
 --
 
 CREATE TABLE `doctors_appointments` (
-  `assigneeID` int(11) NOT NULL,
-  `doctorID` int(11) NOT NULL,
-  `patientID` int(11) NOT NULL,
+  `assignee_id` varchar(11) DEFAULT NULL,
+  `doctor_id` varchar(11) DEFAULT NULL,
+  `patient_id` varchar(11) DEFAULT NULL,
   `appointment_date` date NOT NULL,
-  `start_time` time NOT NULL,
-  `end_time` time NOT NULL,
-  `description` varchar(255) NOT NULL,
-  `appointment_status` varchar(1) NOT NULL
+  `start_time` int(11) NOT NULL,
+  `end_time` int(11) NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `appointment_status` varchar(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `doctors_appointments`
+--
+
+INSERT INTO `doctors_appointments` (`assignee_id`, `doctor_id`, `patient_id`, `appointment_date`, `start_time`, `end_time`, `description`, `appointment_status`) VALUES
+('NR5', 'DR6', '', '0000-00-00', 0, 0, '', 'N'),
+('N1', 'D1', 'P1', '2023-03-01', 8, 9, 'Task A', 'N'),
+('N2', 'D1', 'B78', '2023-03-01', 9, 10, 'Follow up consulation', 'N'),
+('N3', 'D1', 'B78', '2023-03-01', 10, 11, 'Re-examination of Lungs', 'N'),
+('NR5', 'DR6', '61162024', '2023-03-04', 8, 8, 'Lorem ipsum dolerum. This is a dummy appointment', 'N'),
+('NR5', '`11`', '77788', '2023-03-05', 8, 8, 'Random appointment', 'N'),
+('NR5', '`12`', '61162024', '2023-03-09', 8, 8, 'Lorem ipsum dolerum. This is a dummy appointment 2', 'N'),
+('N2', 'D1', 'P2', '2023-04-01', 9, 10, 'Task B', 'N'),
+('N2', 'D1', 'B78', '2023-05-01', 9, 10, 'Follow up consulation', 'N'),
+('N1', 'D2', 'P3', '2023-05-01', 10, 11, 'Task A', 'N'),
+('N3', 'D1', 'B78', '2023-05-01', 11, 12, 'Examination of Lungs', 'N');
 
 -- --------------------------------------------------------
 
@@ -178,14 +195,25 @@ INSERT INTO `nurses` (`Fname`, `Lname`, `Nurse_Id`, `Tel_number`) VALUES
 --
 
 CREATE TABLE `nurses_tasks` (
-  `assigneeID` int(11) NOT NULL,
-  `nursesID` int(11) NOT NULL,
+  `assignee_id` varchar(11) DEFAULT NULL,
+  `nurses_id` varchar(11) DEFAULT NULL,
   `task_date` date NOT NULL,
-  `start_time` time NOT NULL,
-  `end_time` time NOT NULL,
-  `description` varchar(255) NOT NULL,
-  `task_status` varchar(1) NOT NULL
+  `start_time` int(11) NOT NULL,
+  `end_time` int(11) NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `task_status` varchar(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `nurses_tasks`
+--
+
+INSERT INTO `nurses_tasks` (`assignee_id`, `nurses_id`, `task_date`, `start_time`, `end_time`, `description`, `task_status`) VALUES
+('D3', 'N7', '2023-03-01', 10, 11, 'Washing Linen of Ward F', 'N'),
+('B456', 'N7', '2023-03-03', 9, 10, 'Washing Linen of Ward C', 'N'),
+('D2', 'N7', '2023-03-03', 10, 11, 'IV Check at Ward T', 'N'),
+('D2', 'N7', '2023-03-03', 12, 13, 'Oversee Blood Drive at Ward G', 'N'),
+('D44', '`34`', '2023-03-04', 8, 9, 'Test2', 'N');
 
 -- --------------------------------------------------------
 
@@ -271,7 +299,7 @@ ALTER TABLE `employee`
 -- Indexes for table `nurses_tasks`
 --
 ALTER TABLE `nurses_tasks`
-  ADD PRIMARY KEY (`start_time`,`end_time`);
+  ADD PRIMARY KEY (`task_date`,`start_time`,`end_time`);
 
 --
 -- Indexes for table `patients`

@@ -54,8 +54,8 @@ $number_of_doctor_rows = mysqli_fetch_row($results_doctors);
          <b id="emailVal">Fname.lname@abc.com</b>
          <img>
          <a class='button' id = "adminHomepg1" href='admin_page.php'>Home</a>
-         <a class='button' id="doctorsListpg1" href='doctorsList.php'>Doctors</a>
-         <a class='button' id="nursesListpg1" href='nursesList.php'>Nurses</a>
+         <a class='button' id="doctorsListpg1" href='doctorsList.php'>Manage doctors</a>
+         <a class='button' id="nursesListpg1" href='nursesList.php'>Manage nurses</a>
          <a class='button' href='logout.php' id='signOut'>SignOut</a>
       </div>
 

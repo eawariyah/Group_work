@@ -12,7 +12,7 @@
     <h1>Add new patient</h1>
 
     <div id="popupform">
-        <form class="container" action="add_employee.php" method="POST">
+        <form class="container" action="add_patient.php" method="POST">
             
             <label for="f_name">First Name</label><br>
             <input type="text" name="f_name" class="f_name" id="f_name"><br>

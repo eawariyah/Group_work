@@ -1,20 +1,22 @@
+
+
+
 <?php
-if (isset($_POST['Submit'])) 
-{
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "clinic_db";
-    $conn = new mysqli($servername, $username, $password, $dbname);
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "clinic_db";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
 	// Check connection
 	if ($conn->connect_error) {
 		//stop executing the code and echo error
 	  die("Connection failed: " . $conn->connect_error);
 	} 
 
-
-//check if the form has been submitted 
-
+if (isset($_POST['Submit'])) 
+{
     //Get the user_ID and password from the form 
     $firstname = $_POST['f_name'];
     $lastname = $_POST['l_name'];
@@ -29,25 +31,20 @@ if (isset($_POST['Submit']))
     $patient_number = $_POST['patientNumber'];
 
 
+    
+   //insert the data into the doctor table
+
+   $sql = "INSERT INTO patients(Firstname, Lastname, Gender, DOB, Height, Patient_weight, Ethnicity, BloodGroup, MedicalHistory, Email, PhoneNumber) 
+   VALUES ( '$firstname', '$lastname', '$patient_gender', '.$patient_DOB.', '$patient_height', '$patient_weight', '$patient_ethnicity', '$patient_bloodgroup', '$patient_history', '$patient_email', '$patient_number')"; 
    
-
-   //insert the data into the patient table
-
-    $sql = "INSERT INTO patients(Firstname, Lastname, Gender, DOB, Height, Patient_weight, Ethnicity, BloodGroup, MedicalHistory, Email, PhoneNumber) 
-    VALUES ( '$firstname', '$lastname', '$patient_gender', '$patient_DOB', '$patient_height', '$patient_weight', '$patient_ethnicity', '$patient_bloodgroup', '$patient_history', '$patient_email', '$patient_number')"; 
     
-    
-        if($conn->query($sql) === TRUE){
-            header("Location : admin_page.php");
-            exit();
-        }
-        else {echo "Error: " . $sql . "<br>" . $conn->error;
-         
+    if($conn->query($sql)===True ){
+        header("Location: nursesHome.php");
+        exit();
     }
-    $conn->close();
-}
-else{
-    echo"error"; 
+    else {echo "Error: " . $sql . "<br>" . $conn->error;}
+    
 }
 
+$conn->close();
 ?>

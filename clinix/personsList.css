@@ -32,7 +32,6 @@ html, body {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  z-index: 0%;
 }
 
 #nurseTable{
@@ -58,7 +57,7 @@ html, body {
 
 #doctorTable{
   position: absolute;
-  top: 4%;
+  top: 10%;
   left: 21.5%;
   width: 78%;
   height: 20%;

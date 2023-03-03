@@ -12,7 +12,7 @@ $sql = "SELECT * FROM employee where emp_role='d'";
 $result = $conn->query($sql);
 $qry = "SELECT * FROM employee where emp_role='n'"; 
 $res = $conn->query($qry);
-
+$abc=
 
 $results_nurse = mysqli_query($conn, "SELECT COUNT(*) FROM employee where emp_role='n'"); 
 $number_of_nurse_rows = mysqli_fetch_row($results_nurse); 

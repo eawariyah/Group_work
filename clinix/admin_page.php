@@ -13,6 +13,12 @@ $result = $conn->query($sql);
 $qry = "SELECT * FROM employee where emp_role='n'"; 
 $res = $conn->query($qry);
 
+
+$results_nurse = mysqli_query($conn, "SELECT COUNT(*) FROM employee where emp_role='n'"); 
+$number_of_nurse_rows = mysqli_fetch_row($results_nurse); 
+
+$results_doctors = mysqli_query($conn, "SELECT COUNT(*) FROM employee where emp_role='d'"); 
+$number_of_doctor_rows = mysqli_fetch_row($results_doctors);
 ?>
 
 <!DOCTYPE html>
@@ -49,13 +55,25 @@ $res = $conn->query($qry);
 
             <div class='numberPatients' id='numberPatients'>
                <i class='fa fa-warning' style="font-size:24px;"></i>
-               <h2>Number of Nurses</h2>
+               <h2 class = 'nurseSize1'>Nurses</h2>
+               <p class = 'nurseSize'>
+                  <?php
+                    echo $number_of_nurse_rows[0];
+                  ?>
+               </p>
+
                <!-- <p>Here is some information.</p> -->
             </div>
 
             <div class='numberDoctors' id='numberDoctors'>
                <i class='fa fa-warning' style="font-size:24px;"></i>
-               <h2>Number of Doctors</h2>
+               <h2 class="doctorSize1">Doctors</h2>
+               <img src="doctors-hover.png" class = "doctorLogo">
+               <p class = 'doctorSize'>
+                  <?php
+                    echo $number_of_doctor_rows[0];
+                  ?>
+               </p>
                <!-- <p>Here is some information.</p> -->
             </div>
 

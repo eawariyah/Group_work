@@ -13,7 +13,7 @@
   <div class='navBar'>
     <button onclick="myFunction()" class="dropbtn">Menu</button>
     <div id="myDropdown" class="dropdown-content">
-    <a href="./../../clinix/doctorsHome.php">Dashboard</a>
+    <a href="./../../clinix1/doctorsHome.php">Dashboard</a>
     <a href="createTasksView.php">Create Task</a>
       <a href="dailyAppointmentsView.php">Schedule</a>
       <a href="logout.php">SignOut</a>

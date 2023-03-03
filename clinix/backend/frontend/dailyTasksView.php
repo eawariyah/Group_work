@@ -22,8 +22,8 @@
     <div class='navBar2'>
       <button onclick="myFunction()" class="dropbtn">Menu</button>
       <div id="myDropdown" class="dropdown-content">
-      <a href="./../../clinix/nursesHome.php">Dashboard</a>
-      <a href="./../../clinix/patientsList.php">Patients</a>
+      <a href="./../../clinix1/nursesHome.php">Dashboard</a>
+      <a href="./../../clinix1/patientsList.php">Patients</a>
       <a href="createAppointmentView.php">Create Appointment</a>
       <a href="dailyTasksView.php">Schedule</a>
       <a href="logout.php">SignOut</a>

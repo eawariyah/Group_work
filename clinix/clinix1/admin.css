@@ -1,0 +1,224 @@
+#adminHomepg1{
+  position: absolute;
+  bottom: 60%;
+  left: 5%;
+}
+#doctorsListpg1{
+  position: absolute;
+  bottom: 40%;
+  left: 5%;
+}
+#nursesListpg1{
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+}
+.doctorSize{
+  position: absolute;
+  left: 27%;
+  top: -4%;
+  font-weight: 800;
+  font-size: 2em;
+
+}
+.nurseSize{
+  position: absolute;
+  left: 27%;
+  top: -4%;
+  font-weight: 800;
+  font-size: 2em;
+}
+
+  .doctorSize1{
+    position: absolute;
+    left: 18%;
+    top: 27%;
+    font-weight: 800;
+    font-size: 2em;
+  }
+
+  .nurseSize1{
+    position: absolute;
+    left: 16%;
+    top: 27%;
+    font-weight: 800;
+    font-size: 2em;
+  }
+
+  .doctorLogo{
+    position: absolute;
+    right: 18%;
+    top: 10%;
+  }
+   
+   #numberPatients{
+      position: absolute;
+      right: 14%;
+      bottom: 57%;
+      background-color: white;
+      width: 30%;
+      border-radius: 5px;
+      border: none;
+      height: 20%;
+      /* border: 0.5px solid #0000009f; */
+      border-radius: 7px;
+      border: 0.5px solid #d5e9f3;
+      box-shadow: 0 3px 5px 0 rgb(95 95 97 / 30%);
+    }
+
+    .doctorTablescontainer{
+      position: absolute;
+    }
+    #numberDoctors{
+      position: absolute;
+      right: 48.5%;
+      bottom: 57%;
+      background-color: white;
+      width: 30%;
+      border-radius: 5px;
+      border: none;
+      height: 20%;
+      /* border: 0.5px solid #0000009f; */
+      border-radius: 7px;
+      border: 0.5px solid #d5e9f3;
+      box-shadow: 0 3px 5px 0 rgb(95 95 97 / 30%);
+    }
+
+    .statusTitle{
+      position: absolute;
+      top: 10%;
+      left: 22%;
+      font-family: "Inter";
+      font-weight: 900;
+      font-size: 2em;
+    }
+
+    .doctorTitle{
+      position: absolute;
+      top: 44%;
+      left: 22%;
+      font-family: "Inter";
+      font-weight: 900;
+      font-size: 2em;
+    }
+
+    .nurseTitle{
+      position: absolute;
+      top: 44%;
+      left: 65%;
+      font-family: "Inter";
+      font-weight: 900;
+        font-size: 2em;
+    }
+
+    .welcomeNote{
+      position: absolute;
+      top: 0%;
+      left: 22%;
+      font-family: "Inter";
+      font-weight: 900;
+      font-size: 2em;
+    }
+
+    .patients {
+    position: display;
+    height: 100px;
+    width: 100%;
+
+    top: 10;  
+    left: 50%;
+    line-height: 250px;
+    text-align: center;  
+    background: #03989E;
+    z-index: 2;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+  #doctorTable{
+    position: absolute;
+    bottom: 21%;
+    left: 21.5%;
+    width: 20%;
+    height: 20%;
+    font-size: 0.75em;
+    font-weight: 600;
+    border-radius: 7px;
+    border: 0.5px solid #d5e9f3;
+    box-shadow: 0 3px 5px 0 rgb(95 95 97 / 30%);
+    overflow-y: scroll;
+    overflow-x: scroll;
+    }
+
+    #nurseTable{
+      position: absolute;
+      bottom: 21%;
+      left: 64%;
+      width: 20%;
+      height: 20%;
+      font-size: 0.75em;
+      font-weight: 600;
+      border-radius: 7px;
+      border: 0.5px solid #d5e9f3;
+      box-shadow: 0 3px 5px 0 rgb(95 95 97 / 30%);
+      overflow-y: scroll;
+      overflow-x: scroll;
+    }
+
+    .content {
+      margin-left: 200px;
+      padding: 50px;
+      top: 0;  
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 8px;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #656565;
+      color: white;
+    }
+
+    input[type=text], input[type=submit] {
+      padding: 6px;
+      margin: 10px;
+      border: none;
+      border-radius: 3px;
+    }
+
+    input[type=submit] {
+      background-color: #03989E;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* .navBar2{
+    display: inline-block;
+    position: absolute;
+    top: 0%;
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    } */
+
+@media only screen and (max-width: 800px){
+.navBar{
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+}
+#adminHomepg1{
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+}
+
+}
